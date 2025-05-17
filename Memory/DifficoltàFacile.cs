@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace Memory
 {
-    public partial class Form1: Form
+    public partial class DifficoltàFacile: Form
     {
-        public Form1()
+        public DifficoltàFacile()
         {
             InitializeComponent();
-        }
-
-   
-
-        private void btn_Facile_Click(object sender, EventArgs e)
-        {
-            Form DifficoltaFacile = new Form();
-            DifficoltaFacile.ShowDialog();
-            
         }
     }
 }
