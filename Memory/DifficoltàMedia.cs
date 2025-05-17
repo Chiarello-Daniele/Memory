@@ -9,7 +9,7 @@ namespace Memory
     public partial class DifficoltàMedia : Form
     {
         List<Panel> caselle = new List<Panel>();
-        List<int> numeri = new List<int>();
+        List<Image> immagini = new List<Image>();
 
         public DifficoltàMedia()
         {
@@ -19,6 +19,7 @@ namespace Memory
 
         private void IniziaGioco()
         {
+            // Aggiungi i 16 pannelli manualmente
             caselle.Add(pnl_1Medio);
             caselle.Add(pnl_2Medio);
             caselle.Add(pnl_3Medio);
@@ -36,18 +37,32 @@ namespace Memory
             caselle.Add(pnl_15Medio);
             caselle.Add(pnl_16Medio);
 
-            numeri = new List<int>() {
-                1,1,2,2,3,3,4,4,
-                5,5,6,6,7,7,8,8
-            };
+            // 1. Carica le immagini (sostituisci con le tue immagini)
+            immagini.Add(Properties.Resources.Mario);
+            immagini.Add(Properties.Resources.Mario);
+            immagini.Add(Properties.Resources.Luigi);
+            immagini.Add(Properties.Resources.Luigi);
+            immagini.Add(Properties.Resources.Peach);
+            immagini.Add(Properties.Resources.Peach);
+            immagini.Add(Properties.Resources.Wario);
+            immagini.Add(Properties.Resources.Wario);
+            immagini.Add(Properties.Resources.Yoshy);
+            immagini.Add(Properties.Resources.Yoshy);
+            immagini.Add(Properties.Resources.Toad);
+            immagini.Add(Properties.Resources.Toad);
+            immagini.Add(Properties.Resources.DonkeyKong);
+            immagini.Add(Properties.Resources.DonkeyKong);
+            immagini.Add(Properties.Resources.bowser);
+            immagini.Add(Properties.Resources.bowser);
 
+            // 2. Mischia le immagini
             Random rnd = new Random();
-            numeri = numeri.OrderBy(x => rnd.Next()).ToList();
+            immagini = immagini.OrderBy(x => rnd.Next()).ToList();
 
-            // Assegna numeri ai pannelli
+            // 3. Assegna le immagini ai pannelli
             for (int i = 0; i < caselle.Count; i++)
             {
-                caselle[i].Tag = numeri[i]; // salviamo il numero nel Tag
+                caselle[i].Tag = immagini[i]; // salva l'immagine nel Tag
                 caselle[i].BackColor = Color.Gray; // colore iniziale
                 caselle[i].Click += Pannello_Click;
             }
@@ -56,17 +71,20 @@ namespace Memory
         private void Pannello_Click(object sender, EventArgs e)
         {
             Panel pannello = sender as Panel;
-            int numero = (int)pannello.Tag;
+            Image immagine = (Image)pannello.Tag;
 
+            // Mostra l'immagine sul pannello
             pannello.BackColor = Color.White;
             pannello.Controls.Clear();
-            pannello.Controls.Add(new Label
+            PictureBox pictureBox = new PictureBox
             {
-                Text = numero.ToString(),
-                AutoSize = true,
-                Font = new Font("Arial", 16, FontStyle.Bold),
-                Location = new Point(10, 10)
-            });
+                Image = immagine,
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                Dock = DockStyle.Fill
+            };
+            pannello.Controls.Add(pictureBox);
+
+            // Qui puoi aggiungere logica per confrontare le immagini
         }
     }
 }
