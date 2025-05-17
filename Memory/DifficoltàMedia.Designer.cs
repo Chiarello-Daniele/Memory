@@ -79,7 +79,7 @@
             this.pnl_1Medio.Name = "pnl_1Medio";
             this.pnl_1Medio.Size = new System.Drawing.Size(60, 60);
             this.pnl_1Medio.TabIndex = 0;
-            this.pnl_1Medio.Click += new System.EventHandler(this.pnl_1Medio_Click);
+        
             // 
             // pnl_2Medio
             // 
@@ -109,7 +109,7 @@
             this.pnl_7Medio.Name = "pnl_7Medio";
             this.pnl_7Medio.Size = new System.Drawing.Size(60, 60);
             this.pnl_7Medio.TabIndex = 6;
-            this.pnl_7Medio.Click += new System.EventHandler(this.pnl_7Medio_Click);
+       
             // 
             // pnl_9Medio
             // 
