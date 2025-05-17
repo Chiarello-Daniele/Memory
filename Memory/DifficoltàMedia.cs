@@ -136,5 +136,7 @@ namespace Memory
                 secondoPannello = null;
             }
         }
+
+        
     }
 }

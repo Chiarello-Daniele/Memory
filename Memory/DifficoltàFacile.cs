@@ -16,5 +16,12 @@ namespace Memory
         {
             InitializeComponent();
         }
+
+        private void pnl_8Facile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
