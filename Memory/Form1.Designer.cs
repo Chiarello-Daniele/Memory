@@ -46,7 +46,7 @@
             this.pnl_layoutHome.Controls.Add(this.btn_Facile);
             this.pnl_layoutHome.Controls.Add(this.lbl_Titolo);
             this.pnl_layoutHome.Location = new System.Drawing.Point(148, 31);
-            this.pnl_layoutHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_layoutHome.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_layoutHome.Name = "pnl_layoutHome";
             this.pnl_layoutHome.Size = new System.Drawing.Size(300, 325);
             this.pnl_layoutHome.TabIndex = 0;
@@ -60,11 +60,12 @@
             this.lbl_difficoltà.Size = new System.Drawing.Size(166, 41);
             this.lbl_difficoltà.TabIndex = 4;
             this.lbl_difficoltà.Text = "Seleziona la tua Difficoltà";
+            
             // 
             // btn_Difficile
             // 
             this.btn_Difficile.Location = new System.Drawing.Point(110, 219);
-            this.btn_Difficile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Difficile.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Difficile.Name = "btn_Difficile";
             this.btn_Difficile.Size = new System.Drawing.Size(56, 19);
             this.btn_Difficile.TabIndex = 3;
@@ -75,7 +76,7 @@
             // btn_Medio
             // 
             this.btn_Medio.Location = new System.Drawing.Point(110, 171);
-            this.btn_Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Medio.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Medio.Name = "btn_Medio";
             this.btn_Medio.Size = new System.Drawing.Size(56, 19);
             this.btn_Medio.TabIndex = 2;
@@ -86,7 +87,7 @@
             // btn_Facile
             // 
             this.btn_Facile.Location = new System.Drawing.Point(110, 119);
-            this.btn_Facile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Facile.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Facile.Name = "btn_Facile";
             this.btn_Facile.Size = new System.Drawing.Size(56, 19);
             this.btn_Facile.TabIndex = 1;
@@ -110,7 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 390);
             this.Controls.Add(this.pnl_layoutHome);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.pnl_layoutHome.ResumeLayout(false);
