@@ -19,7 +19,7 @@ namespace Memory
 
         private void IniziaGioco()
         {
-            // Aggiungi i 16 pannelli manualmente
+            // Aggiungi i 16 pannelli 
             caselle.Add(pnl_1Medio);
             caselle.Add(pnl_2Medio);
             caselle.Add(pnl_3Medio);
@@ -37,7 +37,7 @@ namespace Memory
             caselle.Add(pnl_15Medio);
             caselle.Add(pnl_16Medio);
 
-            // 1. Carica le immagini (sostituisci con le tue immagini)
+            //  Carica le immagini 
             immagini.Add(Properties.Resources.Mario);
             immagini.Add(Properties.Resources.Mario);
             immagini.Add(Properties.Resources.Luigi);
@@ -55,11 +55,11 @@ namespace Memory
             immagini.Add(Properties.Resources.bowser);
             immagini.Add(Properties.Resources.bowser);
 
-            // 2. Mischia le immagini
+            //  Mischia le immagini
             Random rnd = new Random();
             immagini = immagini.OrderBy(x => rnd.Next()).ToList();
 
-            // 3. Assegna le immagini ai pannelli
+            //  Assegna le immagini ai pannelli
             for (int i = 0; i < caselle.Count; i++)
             {
                 caselle[i].Tag = immagini[i]; // salva l'immagine nel Tag
@@ -83,8 +83,11 @@ namespace Memory
                 Dock = DockStyle.Fill
             };
             pannello.Controls.Add(pictureBox);
+            // Controlla se ci sono due immagini visibili
+            if(immagine.Co)
 
-            // Qui puoi aggiungere logica per confrontare le immagini
+
+
         }
 
         
