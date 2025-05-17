@@ -86,5 +86,7 @@ namespace Memory
 
             // Qui puoi aggiungere logica per confrontare le immagini
         }
+
+        
     }
 }

@@ -67,116 +67,132 @@
             this.panel1.Controls.Add(this.pnl_3Medio);
             this.panel1.Controls.Add(this.pnl_2Medio);
             this.panel1.Controls.Add(this.pnl_1Medio);
-            this.panel1.Location = new System.Drawing.Point(31, 38);
+            this.panel1.Location = new System.Drawing.Point(23, 31);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1291, 559);
+            this.panel1.Size = new System.Drawing.Size(968, 454);
             this.panel1.TabIndex = 0;
             // 
             // pnl_13Medio
             // 
-            this.pnl_13Medio.Location = new System.Drawing.Point(527, 174);
+            this.pnl_13Medio.Location = new System.Drawing.Point(395, 141);
+            this.pnl_13Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_13Medio.Name = "pnl_13Medio";
-            this.pnl_13Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_13Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_13Medio.TabIndex = 13;
             // 
             // pnl_14Medio
             // 
-            this.pnl_14Medio.Location = new System.Drawing.Point(341, 290);
+            this.pnl_14Medio.Location = new System.Drawing.Point(256, 236);
+            this.pnl_14Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_14Medio.Name = "pnl_14Medio";
-            this.pnl_14Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_14Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_14Medio.TabIndex = 11;
             // 
             // pnl_15Medio
             // 
-            this.pnl_15Medio.Location = new System.Drawing.Point(260, 290);
+            this.pnl_15Medio.Location = new System.Drawing.Point(195, 236);
+            this.pnl_15Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_15Medio.Name = "pnl_15Medio";
-            this.pnl_15Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_15Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_15Medio.TabIndex = 12;
             // 
             // pnl_16Medio
             // 
-            this.pnl_16Medio.Location = new System.Drawing.Point(172, 290);
+            this.pnl_16Medio.Location = new System.Drawing.Point(129, 236);
+            this.pnl_16Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_16Medio.Name = "pnl_16Medio";
-            this.pnl_16Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_16Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_16Medio.TabIndex = 10;
             // 
             // pnl_6Medio
             // 
             this.pnl_6Medio.BackColor = System.Drawing.Color.White;
-            this.pnl_6Medio.Location = new System.Drawing.Point(527, 40);
+            this.pnl_6Medio.Location = new System.Drawing.Point(395, 32);
+            this.pnl_6Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_6Medio.Name = "pnl_6Medio";
-            this.pnl_6Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_6Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_6Medio.TabIndex = 4;
             // 
             // pnl_8Medio
             // 
-            this.pnl_8Medio.Location = new System.Drawing.Point(59, 174);
+            this.pnl_8Medio.Location = new System.Drawing.Point(44, 141);
+            this.pnl_8Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_8Medio.Name = "pnl_8Medio";
-            this.pnl_8Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_8Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_8Medio.TabIndex = 8;
             // 
             // pnl_5Medio
             // 
-            this.pnl_5Medio.Location = new System.Drawing.Point(428, 40);
+            this.pnl_5Medio.Location = new System.Drawing.Point(321, 32);
+            this.pnl_5Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_5Medio.Name = "pnl_5Medio";
-            this.pnl_5Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_5Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_5Medio.TabIndex = 9;
             // 
             // pnl_11Medio
             // 
-            this.pnl_11Medio.Location = new System.Drawing.Point(329, 174);
+            this.pnl_11Medio.Location = new System.Drawing.Point(247, 141);
+            this.pnl_11Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_11Medio.Name = "pnl_11Medio";
-            this.pnl_11Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_11Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_11Medio.TabIndex = 7;
             // 
             // pnl_7Medio
             // 
             this.pnl_7Medio.BackColor = System.Drawing.Color.White;
-            this.pnl_7Medio.Location = new System.Drawing.Point(610, 40);
+            this.pnl_7Medio.Location = new System.Drawing.Point(458, 32);
+            this.pnl_7Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_7Medio.Name = "pnl_7Medio";
-            this.pnl_7Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_7Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_7Medio.TabIndex = 6;
             // 
             // pnl_9Medio
             // 
-            this.pnl_9Medio.Location = new System.Drawing.Point(147, 174);
+            this.pnl_9Medio.Location = new System.Drawing.Point(110, 141);
+            this.pnl_9Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_9Medio.Name = "pnl_9Medio";
-            this.pnl_9Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_9Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_9Medio.TabIndex = 4;
             // 
             // pnl_10Medio
             // 
-            this.pnl_10Medio.Location = new System.Drawing.Point(244, 174);
+            this.pnl_10Medio.Location = new System.Drawing.Point(183, 141);
+            this.pnl_10Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_10Medio.Name = "pnl_10Medio";
-            this.pnl_10Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_10Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_10Medio.TabIndex = 5;
             // 
             // pnl_12Medio
             // 
-            this.pnl_12Medio.Location = new System.Drawing.Point(428, 174);
+            this.pnl_12Medio.Location = new System.Drawing.Point(321, 141);
+            this.pnl_12Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_12Medio.Name = "pnl_12Medio";
-            this.pnl_12Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_12Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_12Medio.TabIndex = 3;
             // 
             // pnl_4Medio
             // 
-            this.pnl_4Medio.Location = new System.Drawing.Point(329, 40);
+            this.pnl_4Medio.Location = new System.Drawing.Point(247, 32);
+            this.pnl_4Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_4Medio.Name = "pnl_4Medio";
-            this.pnl_4Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_4Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_4Medio.TabIndex = 2;
             // 
             // pnl_3Medio
             // 
-            this.pnl_3Medio.Location = new System.Drawing.Point(228, 40);
+            this.pnl_3Medio.Location = new System.Drawing.Point(171, 32);
+            this.pnl_3Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_3Medio.Name = "pnl_3Medio";
-            this.pnl_3Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_3Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_3Medio.TabIndex = 1;
             // 
             // pnl_2Medio
             // 
-            this.pnl_2Medio.Location = new System.Drawing.Point(147, 40);
+            this.pnl_2Medio.Location = new System.Drawing.Point(110, 32);
+            this.pnl_2Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_2Medio.Name = "pnl_2Medio";
-            this.pnl_2Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_2Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_2Medio.TabIndex = 1;
             // 
             // pnl_1Medio
@@ -184,17 +200,20 @@
             this.pnl_1Medio.BackColor = System.Drawing.Color.White;
             this.pnl_1Medio.BackgroundImage = global::Memory.Properties.Resources.Wario;
             this.pnl_1Medio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnl_1Medio.Location = new System.Drawing.Point(59, 40);
+            this.pnl_1Medio.Location = new System.Drawing.Point(44, 32);
+            this.pnl_1Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_1Medio.Name = "pnl_1Medio";
-            this.pnl_1Medio.Size = new System.Drawing.Size(60, 60);
+            this.pnl_1Medio.Size = new System.Drawing.Size(45, 49);
             this.pnl_1Medio.TabIndex = 0;
+    
             // 
             // DifficoltàMedia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1373, 631);
+            this.ClientSize = new System.Drawing.Size(1030, 513);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DifficoltàMedia";
             this.Text = "DifficoltàMedia";
             this.panel1.ResumeLayout(false);
