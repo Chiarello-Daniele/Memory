@@ -10,20 +10,54 @@ using System.Windows.Forms;
 
 namespace Memory
 {
-    public partial class Form1: Form
+    public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
         }
 
-   
+
 
         private void btn_Facile_Click(object sender, EventArgs e)
         {
-            Form DifficoltaFacile = new Form();
-            DifficoltaFacile.ShowDialog();
-            
+            try
+            {
+                DifficoltàFacile DifficoltàFacile = new DifficoltàFacile();
+                DifficoltàFacile.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore: " + ex.Message);
+
+            }
+        }
+
+        private void btn_Medio_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DifficoltàMedia DifficoltàMedia = new DifficoltàMedia();
+                DifficoltàMedia.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore: " + ex.Message);
+            }
+        }
+
+
+        private void btn_Difficile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DifficoltàDifficile DifficoltàDifficile = new DifficoltàDifficile();
+                DifficoltàDifficile.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore: " + ex.Message);
+            }
         }
     }
 }

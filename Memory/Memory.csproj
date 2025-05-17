@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DifficoltàDifficile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DifficoltàDifficile.Designer.cs">
+      <DependentUpon>DifficoltàDifficile.cs</DependentUpon>
+    </Compile>
     <Compile Include="DifficoltàFacile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DifficoltàFacile.Designer.cs">
       <DependentUpon>DifficoltàFacile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DifficoltàMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DifficoltàMedia.Designer.cs">
+      <DependentUpon>DifficoltàMedia.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -62,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DifficoltàFacile.resx">
       <DependentUpon>DifficoltàFacile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DifficoltàMedia.resx">
+      <DependentUpon>DifficoltàMedia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

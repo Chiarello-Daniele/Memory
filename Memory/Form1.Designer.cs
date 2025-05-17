@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_Titolo = new System.Windows.Forms.Label();
-            this.btn_Facile = new System.Windows.Forms.Button();
-            this.btn_Medio = new System.Windows.Forms.Button();
-            this.btn_Difficile = new System.Windows.Forms.Button();
             this.lbl_difficoltà = new System.Windows.Forms.Label();
+            this.btn_Difficile = new System.Windows.Forms.Button();
+            this.btn_Medio = new System.Windows.Forms.Button();
+            this.btn_Facile = new System.Windows.Forms.Button();
+            this.lbl_Titolo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,14 +49,34 @@
             this.panel1.Size = new System.Drawing.Size(400, 400);
             this.panel1.TabIndex = 0;
             // 
-            // lbl_Titolo
+            // lbl_difficoltà
             // 
-            this.lbl_Titolo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titolo.Location = new System.Drawing.Point(122, 20);
-            this.lbl_Titolo.Name = "lbl_Titolo";
-            this.lbl_Titolo.Size = new System.Drawing.Size(155, 43);
-            this.lbl_Titolo.TabIndex = 0;
-            this.lbl_Titolo.Text = "Memory";
+            this.lbl_difficoltà.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_difficoltà.Location = new System.Drawing.Point(92, 82);
+            this.lbl_difficoltà.Name = "lbl_difficoltà";
+            this.lbl_difficoltà.Size = new System.Drawing.Size(221, 51);
+            this.lbl_difficoltà.TabIndex = 4;
+            this.lbl_difficoltà.Text = "Seleziona la tua Difficoltà";
+            // 
+            // btn_Difficile
+            // 
+            this.btn_Difficile.Location = new System.Drawing.Point(147, 269);
+            this.btn_Difficile.Name = "btn_Difficile";
+            this.btn_Difficile.Size = new System.Drawing.Size(75, 23);
+            this.btn_Difficile.TabIndex = 3;
+            this.btn_Difficile.Text = "Difficile";
+            this.btn_Difficile.UseVisualStyleBackColor = true;
+            this.btn_Difficile.Click += new System.EventHandler(this.btn_Difficile_Click);
+            // 
+            // btn_Medio
+            // 
+            this.btn_Medio.Location = new System.Drawing.Point(147, 210);
+            this.btn_Medio.Name = "btn_Medio";
+            this.btn_Medio.Size = new System.Drawing.Size(75, 23);
+            this.btn_Medio.TabIndex = 2;
+            this.btn_Medio.Text = "Medio";
+            this.btn_Medio.UseVisualStyleBackColor = true;
+            this.btn_Medio.Click += new System.EventHandler(this.btn_Medio_Click);
             // 
             // btn_Facile
             // 
@@ -68,33 +88,15 @@
             this.btn_Facile.UseVisualStyleBackColor = true;
             this.btn_Facile.Click += new System.EventHandler(this.btn_Facile_Click);
             // 
-            // btn_Medio
+            // lbl_Titolo
             // 
-            this.btn_Medio.Location = new System.Drawing.Point(147, 210);
-            this.btn_Medio.Name = "btn_Medio";
-            this.btn_Medio.Size = new System.Drawing.Size(75, 23);
-            this.btn_Medio.TabIndex = 2;
-            this.btn_Medio.Text = "Medio";
-            this.btn_Medio.UseVisualStyleBackColor = true;
+            this.lbl_Titolo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titolo.Location = new System.Drawing.Point(122, 20);
+            this.lbl_Titolo.Name = "lbl_Titolo";
+            this.lbl_Titolo.Size = new System.Drawing.Size(155, 43);
+            this.lbl_Titolo.TabIndex = 0;
+            this.lbl_Titolo.Text = "Memory";
             // 
-            // btn_Difficile
-            // 
-            this.btn_Difficile.Location = new System.Drawing.Point(147, 269);
-            this.btn_Difficile.Name = "btn_Difficile";
-            this.btn_Difficile.Size = new System.Drawing.Size(75, 23);
-            this.btn_Difficile.TabIndex = 3;
-            this.btn_Difficile.Text = "Difficile";
-            this.btn_Difficile.UseVisualStyleBackColor = true;
-            // 
-            // lbl_difficoltà
-            // 
-            this.lbl_difficoltà.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_difficoltà.Location = new System.Drawing.Point(92, 82);
-            this.lbl_difficoltà.Name = "lbl_difficoltà";
-            this.lbl_difficoltà.Size = new System.Drawing.Size(221, 51);
-            this.lbl_difficoltà.TabIndex = 4;
-            this.lbl_difficoltà.Text = "Seleziona la tua Difficoltà";
-           
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
