@@ -28,41 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_layoutHome = new System.Windows.Forms.Panel();
             this.lbl_difficoltà = new System.Windows.Forms.Label();
             this.btn_Difficile = new System.Windows.Forms.Button();
             this.btn_Medio = new System.Windows.Forms.Button();
             this.btn_Facile = new System.Windows.Forms.Button();
             this.lbl_Titolo = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.pnl_layoutHome.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnl_layoutHome
             // 
-            this.panel1.Controls.Add(this.lbl_difficoltà);
-            this.panel1.Controls.Add(this.btn_Difficile);
-            this.panel1.Controls.Add(this.btn_Medio);
-            this.panel1.Controls.Add(this.btn_Facile);
-            this.panel1.Controls.Add(this.lbl_Titolo);
-            this.panel1.Location = new System.Drawing.Point(198, 38);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 400);
-            this.panel1.TabIndex = 0;
+            this.pnl_layoutHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.pnl_layoutHome.Controls.Add(this.lbl_difficoltà);
+            this.pnl_layoutHome.Controls.Add(this.btn_Difficile);
+            this.pnl_layoutHome.Controls.Add(this.btn_Medio);
+            this.pnl_layoutHome.Controls.Add(this.btn_Facile);
+            this.pnl_layoutHome.Controls.Add(this.lbl_Titolo);
+            this.pnl_layoutHome.Location = new System.Drawing.Point(148, 31);
+            this.pnl_layoutHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_layoutHome.Name = "pnl_layoutHome";
+            this.pnl_layoutHome.Size = new System.Drawing.Size(300, 325);
+            this.pnl_layoutHome.TabIndex = 0;
             // 
             // lbl_difficoltà
             // 
             this.lbl_difficoltà.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_difficoltà.Location = new System.Drawing.Point(92, 82);
+            this.lbl_difficoltà.Location = new System.Drawing.Point(69, 67);
+            this.lbl_difficoltà.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_difficoltà.Name = "lbl_difficoltà";
-            this.lbl_difficoltà.Size = new System.Drawing.Size(221, 51);
+            this.lbl_difficoltà.Size = new System.Drawing.Size(166, 41);
             this.lbl_difficoltà.TabIndex = 4;
             this.lbl_difficoltà.Text = "Seleziona la tua Difficoltà";
             // 
             // btn_Difficile
             // 
-            this.btn_Difficile.Location = new System.Drawing.Point(147, 269);
+            this.btn_Difficile.Location = new System.Drawing.Point(110, 219);
+            this.btn_Difficile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Difficile.Name = "btn_Difficile";
-            this.btn_Difficile.Size = new System.Drawing.Size(75, 23);
+            this.btn_Difficile.Size = new System.Drawing.Size(56, 19);
             this.btn_Difficile.TabIndex = 3;
             this.btn_Difficile.Text = "Difficile";
             this.btn_Difficile.UseVisualStyleBackColor = true;
@@ -70,9 +74,10 @@
             // 
             // btn_Medio
             // 
-            this.btn_Medio.Location = new System.Drawing.Point(147, 210);
+            this.btn_Medio.Location = new System.Drawing.Point(110, 171);
+            this.btn_Medio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Medio.Name = "btn_Medio";
-            this.btn_Medio.Size = new System.Drawing.Size(75, 23);
+            this.btn_Medio.Size = new System.Drawing.Size(56, 19);
             this.btn_Medio.TabIndex = 2;
             this.btn_Medio.Text = "Medio";
             this.btn_Medio.UseVisualStyleBackColor = true;
@@ -80,9 +85,10 @@
             // 
             // btn_Facile
             // 
-            this.btn_Facile.Location = new System.Drawing.Point(147, 147);
+            this.btn_Facile.Location = new System.Drawing.Point(110, 119);
+            this.btn_Facile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Facile.Name = "btn_Facile";
-            this.btn_Facile.Size = new System.Drawing.Size(75, 23);
+            this.btn_Facile.Size = new System.Drawing.Size(56, 19);
             this.btn_Facile.TabIndex = 1;
             this.btn_Facile.Text = "Facile";
             this.btn_Facile.UseVisualStyleBackColor = true;
@@ -91,28 +97,30 @@
             // lbl_Titolo
             // 
             this.lbl_Titolo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titolo.Location = new System.Drawing.Point(122, 20);
+            this.lbl_Titolo.Location = new System.Drawing.Point(92, 16);
+            this.lbl_Titolo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Titolo.Name = "lbl_Titolo";
-            this.lbl_Titolo.Size = new System.Drawing.Size(155, 43);
+            this.lbl_Titolo.Size = new System.Drawing.Size(125, 35);
             this.lbl_Titolo.TabIndex = 0;
             this.lbl_Titolo.Text = "Memory";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 480);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(637, 390);
+            this.Controls.Add(this.pnl_layoutHome);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
+            this.pnl_layoutHome.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_layoutHome;
         private System.Windows.Forms.Label lbl_difficoltà;
         private System.Windows.Forms.Button btn_Difficile;
         private System.Windows.Forms.Button btn_Medio;
