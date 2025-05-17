@@ -1,47 +1,90 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Memory
 {
-    public partial class DifficoltàMedia: Form
+    public partial class DifficoltàMedia : Form
     {
+        List<Panel> caselle = new List<Panel>();
+        List<Image> immagini = new List<Image>();
+
         public DifficoltàMedia()
         {
             InitializeComponent();
+            IniziaGioco();
         }
 
-        private void pnl_7Medio_Click(object sender, EventArgs e)
+        private void IniziaGioco()
         {
+            // Aggiungi i 16 pannelli manualmente
+            caselle.Add(pnl_1Medio);
+            caselle.Add(pnl_2Medio);
+            caselle.Add(pnl_3Medio);
+            caselle.Add(pnl_4Medio);
+            caselle.Add(pnl_5Medio);
+            caselle.Add(pnl_6Medio);
+            caselle.Add(pnl_7Medio);
+            caselle.Add(pnl_8Medio);
+            caselle.Add(pnl_9Medio);
+            caselle.Add(pnl_10Medio);
+            caselle.Add(pnl_11Medio);
+            caselle.Add(pnl_12Medio);
+            caselle.Add(pnl_13Medio);
+            caselle.Add(pnl_14Medio);
+            caselle.Add(pnl_15Medio);
+            caselle.Add(pnl_16Medio);
 
+            // 1. Carica le immagini (sostituisci con le tue immagini)
+            immagini.Add(Properties.Resources.Mario);
+            immagini.Add(Properties.Resources.Mario);
+            immagini.Add(Properties.Resources.Luigi);
+            immagini.Add(Properties.Resources.Luigi);
+            immagini.Add(Properties.Resources.Peach);
+            immagini.Add(Properties.Resources.Peach);
+            immagini.Add(Properties.Resources.Wario);
+            immagini.Add(Properties.Resources.Wario);
+            immagini.Add(Properties.Resources.Yoshy);
+            immagini.Add(Properties.Resources.Yoshy);
+            immagini.Add(Properties.Resources.Toad);
+            immagini.Add(Properties.Resources.Toad);
+            immagini.Add(Properties.Resources.DonkeyKong);
+            immagini.Add(Properties.Resources.DonkeyKong);
+            immagini.Add(Properties.Resources.bowser);
+            immagini.Add(Properties.Resources.bowser);
+
+            // 2. Mischia le immagini
+            Random rnd = new Random();
+            immagini = immagini.OrderBy(x => rnd.Next()).ToList();
+
+            // 3. Assegna le immagini ai pannelli
+            for (int i = 0; i < caselle.Count; i++)
+            {
+                caselle[i].Tag = immagini[i]; // salva l'immagine nel Tag
+                caselle[i].BackColor = Color.Gray; // colore iniziale
+                caselle[i].Click += Pannello_Click;
+            }
         }
 
-        private void pnl_1Medio_Click(object sender, EventArgs e)
+        private void Pannello_Click(object sender, EventArgs e)
         {
-            CambiaSfondo();
-        }
-        public void CambiaSfondo()
-        {
-            // Cambia il colore di sfondo del pannello
-            pnl_1Medio.BackColor = Color.Red;
-            // Cambia il colore di sfondo del pannello
-            pnl_2Medio.BackColor = Color.Red;
-            // Cambia il colore di sfondo del pannello
-            pnl_3Medio.BackColor = Color.Red;
-            // Cambia il colore di sfondo del pannello
-            pnl_4Medio.BackColor = Color.Red;
-            // Cambia il colore di sfondo del pannello
-            pnl_5Medio.BackColor = Color.Red;
-            // Cambia il colore di sfondo del pannello
-            pnl_6Medio.BackColor = Color.Red;
-            // Cambia il colore di sfondo del pannello
-            pnl_7Medio.BackColor = Color.Red;
+            Panel pannello = sender as Panel;
+            Image immagine = (Image)pannello.Tag;
+
+            // Mostra l'immagine sul pannello
+            pannello.BackColor = Color.White;
+            pannello.Controls.Clear();
+            PictureBox pictureBox = new PictureBox
+            {
+                Image = immagine,
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                Dock = DockStyle.Fill
+            };
+            pannello.Controls.Add(pictureBox);
+
+            // Qui puoi aggiungere logica per confrontare le immagini
         }
     }
 }
