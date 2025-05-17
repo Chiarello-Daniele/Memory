@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +49,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pnl_1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(139, 35);
@@ -58,11 +62,29 @@
             // pnl_1
             // 
             this.pnl_1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_1.Location = new System.Drawing.Point(25, 59);
+            this.pnl_1.Location = new System.Drawing.Point(87, 79);
             this.pnl_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_1.Name = "pnl_1";
             this.pnl_1.Size = new System.Drawing.Size(34, 54);
             this.pnl_1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Location = new System.Drawing.Point(159, 79);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(34, 54);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel3.Location = new System.Drawing.Point(118, 187);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(34, 54);
+            this.panel3.TabIndex = 1;
             // 
             // DifficoltàFacile
             // 
@@ -84,5 +106,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnl_1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
     }
 }
