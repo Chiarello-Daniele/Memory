@@ -74,7 +74,6 @@ namespace Memory
 
         private void Pannello_Click(object sender, EventArgs e)
         {
-            // Se un pannello è già stato cliccato, controlliamo
             Panel pannello = sender as Panel;
             Image immagine = (Image)pannello.Tag;
 
@@ -104,31 +103,17 @@ namespace Memory
                 // Verifica se le immagini sono uguali
                 if (immaginePrimo == immagineSecondo)
                 {
-                    // Se le immagini sono uguali, rendi i pannelli invisibili
-                    Timer timer = new Timer();
-                    timer.Interval = 500; // Piccolo intervallo di tempo per mostrare l'immagine
-                    timer.Tick += (s, args) =>
-                    {
-                        primoPannello.Visible = false;
-                        secondoPannello.Visible = false;
-                        timer.Stop(); // Ferma il timer
-                    };
-                    timer.Start();
+                    // Se le immagini sono uguali, nascondili
+                    primoPannello.Visible = false;
+                    secondoPannello.Visible = false;
                 }
                 else
                 {
-                    // Se le immagini non sono uguali, riportali al colore originale dopo un breve intervallo
-                    Timer timer = new Timer();
-                    timer.Interval = 1000; // Aspetta 1 secondo
-                    timer.Tick += (s, args) =>
-                    {
-                        primoPannello.BackColor = Color.Gray;
-                        secondoPannello.BackColor = Color.Gray;
-                        primoPannello.Controls.Clear();
-                        secondoPannello.Controls.Clear();
-                        timer.Stop();
-                    };
-                    timer.Start();
+                    // Se le immagini non sono uguali, ripristina il colore originale
+                    primoPannello.BackColor = Color.Gray;
+                    secondoPannello.BackColor = Color.Gray;
+                    primoPannello.Controls.Clear();
+                    secondoPannello.Controls.Clear();
                 }
 
                 // Resetta le variabili per il prossimo paio di clic
@@ -136,7 +121,5 @@ namespace Memory
                 secondoPannello = null;
             }
         }
-
-        
     }
 }
