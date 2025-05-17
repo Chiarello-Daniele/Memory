@@ -10,6 +10,10 @@ namespace Memory
     {
         List<Panel> caselle = new List<Panel>();
         List<Image> immagini = new List<Image>();
+        Panel primoPannello = null;
+        Panel secondoPannello = null;
+        Image immaginePrimo = null;
+        Image immagineSecondo = null;
 
         public DifficoltàMedia()
         {
@@ -19,7 +23,7 @@ namespace Memory
 
         private void IniziaGioco()
         {
-            // Aggiungi i 16 pannelli 
+            // Aggiungi i 16 pannelli
             caselle.Add(pnl_1Medio);
             caselle.Add(pnl_2Medio);
             caselle.Add(pnl_3Medio);
@@ -37,7 +41,7 @@ namespace Memory
             caselle.Add(pnl_15Medio);
             caselle.Add(pnl_16Medio);
 
-            //  Carica le immagini 
+            // Carica le immagini
             immagini.Add(Properties.Resources.Mario);
             immagini.Add(Properties.Resources.Mario);
             immagini.Add(Properties.Resources.Luigi);
@@ -55,11 +59,11 @@ namespace Memory
             immagini.Add(Properties.Resources.bowser);
             immagini.Add(Properties.Resources.bowser);
 
-            //  Mischia le immagini
+            // Mischia le immagini
             Random rnd = new Random();
             immagini = immagini.OrderBy(x => rnd.Next()).ToList();
 
-            //  Assegna le immagini ai pannelli
+            // Assegna le immagini ai pannelli
             for (int i = 0; i < caselle.Count; i++)
             {
                 caselle[i].Tag = immagini[i]; // salva l'immagine nel Tag
@@ -70,6 +74,7 @@ namespace Memory
 
         private void Pannello_Click(object sender, EventArgs e)
         {
+            // Se un pannello è già stato cliccato, controlliamo
             Panel pannello = sender as Panel;
             Image immagine = (Image)pannello.Tag;
 
@@ -83,11 +88,53 @@ namespace Memory
                 Dock = DockStyle.Fill
             };
             pannello.Controls.Add(pictureBox);
-            // Controlla se ci sono due immagini visibili
-            if(immagine.Co)
 
+            // Se è il primo pannello cliccato
+            if (primoPannello == null)
+            {
+                primoPannello = pannello;
+                immaginePrimo = immagine;
+            }
+            else if (secondoPannello == null)
+            {
+                // Se è il secondo pannello cliccato
+                secondoPannello = pannello;
+                immagineSecondo = immagine;
 
+                // Verifica se le immagini sono uguali
+                if (immaginePrimo == immagineSecondo)
+                {
+                    // Se le immagini sono uguali, rendi i pannelli invisibili
+                    Timer timer = new Timer();
+                    timer.Interval = 500; // Piccolo intervallo di tempo per mostrare l'immagine
+                    timer.Tick += (s, args) =>
+                    {
+                        primoPannello.Visible = false;
+                        secondoPannello.Visible = false;
+                        timer.Stop(); // Ferma il timer
+                    };
+                    timer.Start();
+                }
+                else
+                {
+                    // Se le immagini non sono uguali, riportali al colore originale dopo un breve intervallo
+                    Timer timer = new Timer();
+                    timer.Interval = 1000; // Aspetta 1 secondo
+                    timer.Tick += (s, args) =>
+                    {
+                        primoPannello.BackColor = Color.Gray;
+                        secondoPannello.BackColor = Color.Gray;
+                        primoPannello.Controls.Clear();
+                        secondoPannello.Controls.Clear();
+                        timer.Stop();
+                    };
+                    timer.Start();
+                }
 
+                // Resetta le variabili per il prossimo paio di clic
+                primoPannello = null;
+                secondoPannello = null;
+            }
         }
     }
 }
