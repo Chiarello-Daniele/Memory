@@ -37,9 +37,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(261, 24);
+            this.label1.Location = new System.Drawing.Point(115, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
@@ -47,31 +48,34 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.pnl_1);
-            this.panel1.Location = new System.Drawing.Point(185, 43);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(139, 35);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 400);
+            this.panel1.Size = new System.Drawing.Size(300, 325);
             this.panel1.TabIndex = 1;
             // 
             // pnl_1
             // 
             this.pnl_1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_1.Location = new System.Drawing.Point(33, 73);
+            this.pnl_1.Location = new System.Drawing.Point(25, 59);
+            this.pnl_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_1.Name = "pnl_1";
-            this.pnl_1.Size = new System.Drawing.Size(45, 67);
+            this.pnl_1.Size = new System.Drawing.Size(34, 54);
             this.pnl_1.TabIndex = 0;
             // 
             // DifficoltàFacile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DifficoltàFacile";
             this.Text = "DifficoltàFacile";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
