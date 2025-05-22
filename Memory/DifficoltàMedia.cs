@@ -2,124 +2,153 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Memory
 {
     public partial class DifficoltàMedia : Form
     {
-        List<Panel> caselle = new List<Panel>();
-        List<Image> immagini = new List<Image>();
+        List<Panel> caselleMedio = new List<Panel>();
+        List<Image> immaginiMedio = new List<Image>();
+        List<int> idImmaginiMedio = new List<int>();
+
         Panel primoPannello = null;
         Panel secondoPannello = null;
-        Image immaginePrimo = null;
-        Image immagineSecondo = null;
+        int indicePrimo = -1;
+        int indiceSecondo = -1;
+        bool blocco = false;
 
         public DifficoltàMedia()
         {
             InitializeComponent();
-            IniziaGioco();
+            IniziaGiocoMedio();
         }
 
-        private void IniziaGioco()
+        private void IniziaGiocoMedio()
         {
-            // Aggiungi i 16 pannelli
-            caselle.Add(pnl_1Medio);
-            caselle.Add(pnl_2Medio);
-            caselle.Add(pnl_3Medio);
-            caselle.Add(pnl_4Medio);
-            caselle.Add(pnl_5Medio);
-            caselle.Add(pnl_6Medio);
-            caselle.Add(pnl_7Medio);
-            caselle.Add(pnl_8Medio);
-            caselle.Add(pnl_9Medio);
-            caselle.Add(pnl_10Medio);
-            caselle.Add(pnl_11Medio);
-            caselle.Add(pnl_12Medio);
-            caselle.Add(pnl_13Medio);
-            caselle.Add(pnl_14Medio);
-            caselle.Add(pnl_15Medio);
-            caselle.Add(pnl_16Medio);
+            // Aggiungi i 16 pannelli alla lista (assicurati che esistano nel Form Designer)
+            caselleMedio.Add(pnl_1Medio);
+            caselleMedio.Add(pnl_2Medio);
+            caselleMedio.Add(pnl_3Medio);
+            caselleMedio.Add(pnl_4Medio);
+            caselleMedio.Add(pnl_5Medio);
+            caselleMedio.Add(pnl_6Medio);
+            caselleMedio.Add(pnl_7Medio);
+            caselleMedio.Add(pnl_8Medio);
+            caselleMedio.Add(pnl_9Medio);
+            caselleMedio.Add(pnl_10Medio);
+            caselleMedio.Add(pnl_11Medio);
+            caselleMedio.Add(pnl_12Medio);
+            caselleMedio.Add(pnl_13Medio);
+            caselleMedio.Add(pnl_14Medio);
+            caselleMedio.Add(pnl_15Medio);
+            caselleMedio.Add(pnl_16Medio);
 
-            // Carica le immagini
-            immagini.Add(Properties.Resources.Mario);
-            immagini.Add(Properties.Resources.Mario);
-            immagini.Add(Properties.Resources.Luigi);
-            immagini.Add(Properties.Resources.Luigi);
-            immagini.Add(Properties.Resources.Peach);
-            immagini.Add(Properties.Resources.Peach);
-            immagini.Add(Properties.Resources.Wario);
-            immagini.Add(Properties.Resources.Wario);
-            immagini.Add(Properties.Resources.Yoshy);
-            immagini.Add(Properties.Resources.Yoshy);
-            immagini.Add(Properties.Resources.Toad);
-            immagini.Add(Properties.Resources.Toad);
-            immagini.Add(Properties.Resources.DonkeyKong);
-            immagini.Add(Properties.Resources.DonkeyKong);
-            immagini.Add(Properties.Resources.bowser);
-            immagini.Add(Properties.Resources.bowser);
+            // Carica immagini (2 per tipo)
+            immaginiMedio.Add(Properties.Resources.Mario);
+            immaginiMedio.Add(Properties.Resources.Mario);
+            immaginiMedio.Add(Properties.Resources.Luigi);
+            immaginiMedio.Add(Properties.Resources.Luigi);
+            immaginiMedio.Add(Properties.Resources.Peach);
+            immaginiMedio.Add(Properties.Resources.Peach);
+            immaginiMedio.Add(Properties.Resources.Wario);
+            immaginiMedio.Add(Properties.Resources.Wario);
+            immaginiMedio.Add(Properties.Resources.Yoshy);
+            immaginiMedio.Add(Properties.Resources.Yoshy);
+            immaginiMedio.Add(Properties.Resources.Toad);
+            immaginiMedio.Add(Properties.Resources.Toad);
+            immaginiMedio.Add(Properties.Resources.DonkeyKong);
+            immaginiMedio.Add(Properties.Resources.DonkeyKong);
+            immaginiMedio.Add(Properties.Resources.bowser);
+            immaginiMedio.Add(Properties.Resources.bowser);
+            // Crea ID per ogni immagine (due uguali per ogni coppia)
+            for (int i = 0; i < 8; i++)
+            {
+                idImmaginiMedio.Add(i);
+                idImmaginiMedio.Add(i);
+            }
 
             // Mischia le immagini
             Random rnd = new Random();
-            immagini = immagini.OrderBy(x => rnd.Next()).ToList();
+            var zipped = immaginiMedio.Zip(idImmaginiMedio, (img, id) => new { img, id }).OrderBy(x => rnd.Next()).ToList();
+            immaginiMedio = zipped.Select(x => x.img).ToList();
+            idImmaginiMedio = zipped.Select(x => x.id).ToList();
 
-            // Assegna le immagini ai pannelli
-            for (int i = 0; i < caselle.Count; i++)
+            // Inizializza i pannelli
+            for (int i = 0; i < caselleMedio.Count; i++)
             {
-                caselle[i].Tag = immagini[i]; // salva l'immagine nel Tag
-                caselle[i].BackColor = Color.Gray; // colore iniziale
-                caselle[i].Click += Pannello_Click;
+                caselleMedio[i].BackgroundImage = Properties.Resources.carta_removebg_preview1;
+                caselleMedio[i].BackgroundImageLayout = ImageLayout.Stretch;
+                caselleMedio[i].Controls.Clear();
+                caselleMedio[i].Click += Pannello_Click;
+                caselleMedio[i].Enabled = true;
+                caselleMedio[i].Visible = true;
             }
         }
 
-        private void Pannello_Click(object sender, EventArgs e)
+        private async void Pannello_Click(object sender, EventArgs e)
         {
-            Panel pannello = sender as Panel;
-            Image immagine = (Image)pannello.Tag;
+            if (blocco) return;
 
-            // Mostra l'immagine sul pannello
-            pannello.BackColor = Color.White;
-            pannello.Controls.Clear();
-            PictureBox pictureBox = new PictureBox
+            Panel pannello = sender as Panel;
+            if (pannello == null || pannello == primoPannello || pannello.Controls.Count > 0)
+                return;
+
+            int indice = caselleMedio.IndexOf(pannello);
+            if (indice == -1) return;
+
+            // Mostra immagine
+            PictureBox pb = new PictureBox
             {
-                Image = immagine,
+                Image = immaginiMedio[indice],
                 SizeMode = PictureBoxSizeMode.StretchImage,
                 Dock = DockStyle.Fill
             };
-            pannello.Controls.Add(pictureBox);
+            pannello.Controls.Add(pb);
+            pannello.BackColor = Color.White;
 
-            // Se è il primo pannello cliccato
             if (primoPannello == null)
             {
                 primoPannello = pannello;
-                immaginePrimo = immagine;
+                indicePrimo = indice;
+                return;
             }
-            else if (secondoPannello == null)
+
+            secondoPannello = pannello;
+            indiceSecondo = indice;
+            blocco = true;
+
+            // Aspetta un secondo per far vedere la seconda immagine
+            await Task.Delay(1000);
+
+            if (idImmaginiMedio[indicePrimo] == idImmaginiMedio[indiceSecondo])
             {
-                // Se è il secondo pannello cliccato
-                secondoPannello = pannello;
-                immagineSecondo = immagine;
-
-                // Verifica se le immagini sono uguali
-                if (immaginePrimo == immagineSecondo)
-                {
-                    // Se le immagini sono uguali, nascondili
-                    primoPannello.Visible = false;
-                    secondoPannello.Visible = false;
-                }
-                else
-                {
-                    // Se le immagini non sono uguali, ripristina il colore originale
-                    primoPannello.BackColor = Color.Gray;
-                    secondoPannello.BackColor = Color.Gray;
-                    primoPannello.Controls.Clear();
-                    secondoPannello.Controls.Clear();
-                }
-
-                // Resetta le variabili per il prossimo paio di clic
-                primoPannello = null;
-                secondoPannello = null;
+                // Se le immagini sono uguali, disabilita e nascondi i pannelli
+                primoPannello.Controls.Clear();
+                secondoPannello.Controls.Clear();
+                primoPannello.Enabled = false;
+                secondoPannello.Enabled = false;
+                primoPannello.Visible = false;
+                secondoPannello.Visible = false;
             }
+
+        
+            else
+            {
+                // Se sono diverse, nascondi le immagini e resetta i colori
+                primoPannello.Controls.Clear();
+                secondoPannello.Controls.Clear();
+                primoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
+                secondoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
+            }
+
+            // Resetta lo stato
+            primoPannello = null;
+            secondoPannello = null;
+            indicePrimo = -1;
+            indiceSecondo = -1;
+            blocco = false;
         }
     }
 }

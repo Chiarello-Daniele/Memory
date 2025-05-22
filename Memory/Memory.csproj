@@ -72,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DifficoltàDifficile.resx">
+      <DependentUpon>DifficoltàDifficile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DifficoltàFacile.resx">
       <DependentUpon>DifficoltàFacile.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +130,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Wario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carta-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carta-removebg-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spiderman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\superman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ironman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
