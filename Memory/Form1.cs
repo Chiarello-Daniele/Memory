@@ -60,6 +60,11 @@ namespace Memory
             }
         }
 
+        private void lbl_Titolo_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //prova
     }
 }
