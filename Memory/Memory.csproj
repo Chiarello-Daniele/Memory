@@ -149,5 +149,23 @@
   <ItemGroup>
     <None Include="Resources\flash.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cicciogamer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marza.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blur.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corona.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\berlusca.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sbanca.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

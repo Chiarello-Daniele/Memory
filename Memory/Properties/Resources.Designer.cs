@@ -63,6 +63,26 @@ namespace Memory.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap berlusca {
+            get {
+                object obj = ResourceManager.GetObject("berlusca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blur {
+            get {
+                object obj = ResourceManager.GetObject("blur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bowser {
             get {
                 object obj = ResourceManager.GetObject("bowser", resourceCulture);
@@ -86,6 +106,26 @@ namespace Memory.Properties {
         internal static System.Drawing.Bitmap carta_removebg_preview1 {
             get {
                 object obj = ResourceManager.GetObject("carta-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cicciogamer {
+            get {
+                object obj = ResourceManager.GetObject("cicciogamer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap corona {
+            get {
+                object obj = ResourceManager.GetObject("corona", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +183,29 @@ namespace Memory.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap marza {
+            get {
+                object obj = ResourceManager.GetObject("marza", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Peach {
             get {
                 object obj = ResourceManager.GetObject("Peach", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sbanca {
+            get {
+                object obj = ResourceManager.GetObject("sbanca", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

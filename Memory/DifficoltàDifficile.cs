@@ -61,6 +61,19 @@ namespace Memory
             caselleDifficile.Add(pnl_31Difficile);
             caselleDifficile.Add(pnl_32Difficile);
 
+            immaginiDifficile.Add(Properties.Resources.cicciogamer);
+            immaginiDifficile.Add(Properties.Resources.cicciogamer);
+            immaginiDifficile.Add(Properties.Resources.marza);
+            immaginiDifficile.Add(Properties.Resources.marza);
+            immaginiDifficile.Add(Properties.Resources.blur);
+            immaginiDifficile.Add(Properties.Resources.blur);
+            immaginiDifficile.Add(Properties.Resources.corona);
+            immaginiDifficile.Add(Properties.Resources.corona);
+            immaginiDifficile.Add(Properties.Resources.berlusca);
+            immaginiDifficile.Add(Properties.Resources.berlusca);
+            immaginiDifficile.Add(Properties.Resources.sbanca);
+            immaginiDifficile.Add(Properties.Resources.sbanca);
+
 
         }
 

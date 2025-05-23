@@ -47,10 +47,10 @@
             this.pnl_layoutHome.Controls.Add(this.btn_Medio);
             this.pnl_layoutHome.Controls.Add(this.btn_Facile);
             this.pnl_layoutHome.Controls.Add(this.lbl_Titolo);
-            this.pnl_layoutHome.Location = new System.Drawing.Point(-1, -4);
-            this.pnl_layoutHome.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl_layoutHome.Location = new System.Drawing.Point(-1, -5);
+            this.pnl_layoutHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl_layoutHome.Name = "pnl_layoutHome";
-            this.pnl_layoutHome.Size = new System.Drawing.Size(649, 401);
+            this.pnl_layoutHome.Size = new System.Drawing.Size(865, 494);
             this.pnl_layoutHome.TabIndex = 0;
             // 
             // lbl_difficoltà
@@ -58,19 +58,18 @@
             this.lbl_difficoltà.BackColor = System.Drawing.Color.Transparent;
             this.lbl_difficoltà.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_difficoltà.ForeColor = System.Drawing.Color.White;
-            this.lbl_difficoltà.Location = new System.Drawing.Point(238, 107);
-            this.lbl_difficoltà.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_difficoltà.Location = new System.Drawing.Point(263, 128);
             this.lbl_difficoltà.Name = "lbl_difficoltà";
-            this.lbl_difficoltà.Size = new System.Drawing.Size(143, 40);
+            this.lbl_difficoltà.Size = new System.Drawing.Size(271, 49);
             this.lbl_difficoltà.TabIndex = 4;
             this.lbl_difficoltà.Text = "Seleziona la tua Difficoltà";
             // 
             // btn_Difficile
             // 
-            this.btn_Difficile.Location = new System.Drawing.Point(279, 264);
-            this.btn_Difficile.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Difficile.Location = new System.Drawing.Point(372, 325);
+            this.btn_Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Difficile.Name = "btn_Difficile";
-            this.btn_Difficile.Size = new System.Drawing.Size(56, 19);
+            this.btn_Difficile.Size = new System.Drawing.Size(75, 23);
             this.btn_Difficile.TabIndex = 3;
             this.btn_Difficile.Text = "Difficile";
             this.btn_Difficile.UseVisualStyleBackColor = true;
@@ -78,10 +77,10 @@
             // 
             // btn_Medio
             // 
-            this.btn_Medio.Location = new System.Drawing.Point(279, 216);
-            this.btn_Medio.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Medio.Location = new System.Drawing.Point(372, 266);
+            this.btn_Medio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Medio.Name = "btn_Medio";
-            this.btn_Medio.Size = new System.Drawing.Size(56, 19);
+            this.btn_Medio.Size = new System.Drawing.Size(75, 23);
             this.btn_Medio.TabIndex = 2;
             this.btn_Medio.Text = "Medio";
             this.btn_Medio.UseVisualStyleBackColor = true;
@@ -89,10 +88,10 @@
             // 
             // btn_Facile
             // 
-            this.btn_Facile.Location = new System.Drawing.Point(279, 164);
-            this.btn_Facile.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Facile.Location = new System.Drawing.Point(372, 202);
+            this.btn_Facile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Facile.Name = "btn_Facile";
-            this.btn_Facile.Size = new System.Drawing.Size(56, 19);
+            this.btn_Facile.Size = new System.Drawing.Size(75, 23);
             this.btn_Facile.TabIndex = 1;
             this.btn_Facile.Text = "Facile";
             this.btn_Facile.UseVisualStyleBackColor = true;
@@ -103,21 +102,20 @@
             this.lbl_Titolo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Titolo.Font = new System.Drawing.Font("Showcard Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titolo.ForeColor = System.Drawing.Color.White;
-            this.lbl_Titolo.Location = new System.Drawing.Point(191, 13);
-            this.lbl_Titolo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Titolo.Location = new System.Drawing.Point(255, 16);
             this.lbl_Titolo.Name = "lbl_Titolo";
-            this.lbl_Titolo.Size = new System.Drawing.Size(250, 77);
+            this.lbl_Titolo.Size = new System.Drawing.Size(333, 95);
             this.lbl_Titolo.TabIndex = 0;
             this.lbl_Titolo.Text = "Memory";
             this.lbl_Titolo.Click += new System.EventHandler(this.lbl_Titolo_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 390);
+            this.ClientSize = new System.Drawing.Size(849, 480);
             this.Controls.Add(this.pnl_layoutHome);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.pnl_layoutHome.ResumeLayout(false);
