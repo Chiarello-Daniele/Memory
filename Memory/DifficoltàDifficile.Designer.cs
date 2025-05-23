@@ -29,22 +29,6 @@
         private void InitializeComponent()
         {
             this.pnl_LayoutDifficile = new System.Windows.Forms.Panel();
-            this.pnl_14Difficile = new System.Windows.Forms.Panel();
-            this.pnl_8Difficile = new System.Windows.Forms.Panel();
-            this.pnl_6Difficile = new System.Windows.Forms.Panel();
-            this.pnl_4Difficile = new System.Windows.Forms.Panel();
-            this.pnl_11Difficile = new System.Windows.Forms.Panel();
-            this.pnl_16Difficile = new System.Windows.Forms.Panel();
-            this.pnl_10Difficile = new System.Windows.Forms.Panel();
-            this.pnl_13Difficile = new System.Windows.Forms.Panel();
-            this.pnl_1Difficile = new System.Windows.Forms.Panel();
-            this.pnl_5Difficile = new System.Windows.Forms.Panel();
-            this.pnl_12Difficile = new System.Windows.Forms.Panel();
-            this.pnl_7Difficile = new System.Windows.Forms.Panel();
-            this.pnl_3Difficile = new System.Windows.Forms.Panel();
-            this.pnl_2Difficile = new System.Windows.Forms.Panel();
-            this.pnl_15Difficile = new System.Windows.Forms.Panel();
-            this.pnl_9Difficile = new System.Windows.Forms.Panel();
             this.pnl_30Difficile = new System.Windows.Forms.Panel();
             this.pnl_24Difficile = new System.Windows.Forms.Panel();
             this.pnl_22Difficile = new System.Windows.Forms.Panel();
@@ -61,6 +45,22 @@
             this.pnl_19Difficile = new System.Windows.Forms.Panel();
             this.pnl_17Difficile = new System.Windows.Forms.Panel();
             this.pnl_31Difficile = new System.Windows.Forms.Panel();
+            this.pnl_14Difficile = new System.Windows.Forms.Panel();
+            this.pnl_8Difficile = new System.Windows.Forms.Panel();
+            this.pnl_6Difficile = new System.Windows.Forms.Panel();
+            this.pnl_4Difficile = new System.Windows.Forms.Panel();
+            this.pnl_11Difficile = new System.Windows.Forms.Panel();
+            this.pnl_16Difficile = new System.Windows.Forms.Panel();
+            this.pnl_9Difficile = new System.Windows.Forms.Panel();
+            this.pnl_10Difficile = new System.Windows.Forms.Panel();
+            this.pnl_13Difficile = new System.Windows.Forms.Panel();
+            this.pnl_1Difficile = new System.Windows.Forms.Panel();
+            this.pnl_5Difficile = new System.Windows.Forms.Panel();
+            this.pnl_12Difficile = new System.Windows.Forms.Panel();
+            this.pnl_7Difficile = new System.Windows.Forms.Panel();
+            this.pnl_3Difficile = new System.Windows.Forms.Panel();
+            this.pnl_2Difficile = new System.Windows.Forms.Panel();
+            this.pnl_15Difficile = new System.Windows.Forms.Panel();
             this.pnl_LayoutDifficile.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,139 +104,6 @@
             this.pnl_LayoutDifficile.Name = "pnl_LayoutDifficile";
             this.pnl_LayoutDifficile.Size = new System.Drawing.Size(1350, 781);
             this.pnl_LayoutDifficile.TabIndex = 1;
-            // 
-            // pnl_14Difficile
-            // 
-            this.pnl_14Difficile.Location = new System.Drawing.Point(968, 256);
-            this.pnl_14Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_14Difficile.Name = "pnl_14Difficile";
-            this.pnl_14Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_14Difficile.TabIndex = 13;
-            // 
-            // pnl_8Difficile
-            // 
-            this.pnl_8Difficile.Location = new System.Drawing.Point(510, 247);
-            this.pnl_8Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_8Difficile.Name = "pnl_8Difficile";
-            this.pnl_8Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_8Difficile.TabIndex = 11;
-            // 
-            // pnl_6Difficile
-            // 
-            this.pnl_6Difficile.Location = new System.Drawing.Point(362, 237);
-            this.pnl_6Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_6Difficile.Name = "pnl_6Difficile";
-            this.pnl_6Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_6Difficile.TabIndex = 12;
-            // 
-            // pnl_4Difficile
-            // 
-            this.pnl_4Difficile.Location = new System.Drawing.Point(218, 237);
-            this.pnl_4Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_4Difficile.Name = "pnl_4Difficile";
-            this.pnl_4Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_4Difficile.TabIndex = 10;
-            // 
-            // pnl_11Difficile
-            // 
-            this.pnl_11Difficile.BackColor = System.Drawing.Color.White;
-            this.pnl_11Difficile.Location = new System.Drawing.Point(790, 65);
-            this.pnl_11Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_11Difficile.Name = "pnl_11Difficile";
-            this.pnl_11Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_11Difficile.TabIndex = 4;
-            // 
-            // pnl_16Difficile
-            // 
-            this.pnl_16Difficile.Location = new System.Drawing.Point(1115, 256);
-            this.pnl_16Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_16Difficile.Name = "pnl_16Difficile";
-            this.pnl_16Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_16Difficile.TabIndex = 8;
-            // 
-            // pnl_10Difficile
-            // 
-            this.pnl_10Difficile.Location = new System.Drawing.Point(662, 247);
-            this.pnl_10Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_10Difficile.Name = "pnl_10Difficile";
-            this.pnl_10Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_10Difficile.TabIndex = 7;
-            // 
-            // pnl_13Difficile
-            // 
-            this.pnl_13Difficile.BackColor = System.Drawing.Color.White;
-            this.pnl_13Difficile.Location = new System.Drawing.Point(952, 65);
-            this.pnl_13Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_13Difficile.Name = "pnl_13Difficile";
-            this.pnl_13Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_13Difficile.TabIndex = 6;
-            // 
-            // pnl_1Difficile
-            // 
-            this.pnl_1Difficile.Location = new System.Drawing.Point(67, 237);
-            this.pnl_1Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_1Difficile.Name = "pnl_1Difficile";
-            this.pnl_1Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_1Difficile.TabIndex = 4;
-            // 
-            // pnl_5Difficile
-            // 
-            this.pnl_5Difficile.Location = new System.Drawing.Point(362, 65);
-            this.pnl_5Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_5Difficile.Name = "pnl_5Difficile";
-            this.pnl_5Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_5Difficile.TabIndex = 5;
-            // 
-            // pnl_12Difficile
-            // 
-            this.pnl_12Difficile.Location = new System.Drawing.Point(805, 256);
-            this.pnl_12Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_12Difficile.Name = "pnl_12Difficile";
-            this.pnl_12Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_12Difficile.TabIndex = 3;
-            // 
-            // pnl_7Difficile
-            // 
-            this.pnl_7Difficile.Location = new System.Drawing.Point(510, 65);
-            this.pnl_7Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_7Difficile.Name = "pnl_7Difficile";
-            this.pnl_7Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_7Difficile.TabIndex = 2;
-            // 
-            // pnl_3Difficile
-            // 
-            this.pnl_3Difficile.Location = new System.Drawing.Point(218, 65);
-            this.pnl_3Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_3Difficile.Name = "pnl_3Difficile";
-            this.pnl_3Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_3Difficile.TabIndex = 1;
-            // 
-            // pnl_2Difficile
-            // 
-            this.pnl_2Difficile.Location = new System.Drawing.Point(78, 65);
-            this.pnl_2Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_2Difficile.Name = "pnl_2Difficile";
-            this.pnl_2Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_2Difficile.TabIndex = 1;
-            // 
-            // pnl_15Difficile
-            // 
-            this.pnl_15Difficile.BackColor = System.Drawing.Color.White;
-            this.pnl_15Difficile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnl_15Difficile.Location = new System.Drawing.Point(1078, 65);
-            this.pnl_15Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_15Difficile.Name = "pnl_15Difficile";
-            this.pnl_15Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_15Difficile.TabIndex = 0;
-            // 
-            // pnl_9Difficile
-            // 
-            this.pnl_9Difficile.BackgroundImage = global::Memory.Properties.Resources.carta_removebg_preview;
-            this.pnl_9Difficile.Location = new System.Drawing.Point(648, 65);
-            this.pnl_9Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_9Difficile.Name = "pnl_9Difficile";
-            this.pnl_9Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_9Difficile.TabIndex = 9;
             // 
             // pnl_30Difficile
             // 
@@ -371,6 +238,139 @@
             this.pnl_31Difficile.Size = new System.Drawing.Size(120, 150);
             this.pnl_31Difficile.TabIndex = 14;
             // 
+            // pnl_14Difficile
+            // 
+            this.pnl_14Difficile.Location = new System.Drawing.Point(968, 256);
+            this.pnl_14Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_14Difficile.Name = "pnl_14Difficile";
+            this.pnl_14Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_14Difficile.TabIndex = 13;
+            // 
+            // pnl_8Difficile
+            // 
+            this.pnl_8Difficile.Location = new System.Drawing.Point(510, 247);
+            this.pnl_8Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_8Difficile.Name = "pnl_8Difficile";
+            this.pnl_8Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_8Difficile.TabIndex = 11;
+            // 
+            // pnl_6Difficile
+            // 
+            this.pnl_6Difficile.Location = new System.Drawing.Point(362, 237);
+            this.pnl_6Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_6Difficile.Name = "pnl_6Difficile";
+            this.pnl_6Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_6Difficile.TabIndex = 12;
+            // 
+            // pnl_4Difficile
+            // 
+            this.pnl_4Difficile.Location = new System.Drawing.Point(218, 237);
+            this.pnl_4Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_4Difficile.Name = "pnl_4Difficile";
+            this.pnl_4Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_4Difficile.TabIndex = 10;
+            // 
+            // pnl_11Difficile
+            // 
+            this.pnl_11Difficile.BackColor = System.Drawing.Color.White;
+            this.pnl_11Difficile.Location = new System.Drawing.Point(790, 65);
+            this.pnl_11Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_11Difficile.Name = "pnl_11Difficile";
+            this.pnl_11Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_11Difficile.TabIndex = 4;
+            // 
+            // pnl_16Difficile
+            // 
+            this.pnl_16Difficile.Location = new System.Drawing.Point(1115, 256);
+            this.pnl_16Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_16Difficile.Name = "pnl_16Difficile";
+            this.pnl_16Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_16Difficile.TabIndex = 8;
+            // 
+            // pnl_9Difficile
+            // 
+            this.pnl_9Difficile.BackgroundImage = global::Memory.Properties.Resources.carta_removebg_preview;
+            this.pnl_9Difficile.Location = new System.Drawing.Point(648, 65);
+            this.pnl_9Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_9Difficile.Name = "pnl_9Difficile";
+            this.pnl_9Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_9Difficile.TabIndex = 9;
+            // 
+            // pnl_10Difficile
+            // 
+            this.pnl_10Difficile.Location = new System.Drawing.Point(662, 247);
+            this.pnl_10Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_10Difficile.Name = "pnl_10Difficile";
+            this.pnl_10Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_10Difficile.TabIndex = 7;
+            // 
+            // pnl_13Difficile
+            // 
+            this.pnl_13Difficile.BackColor = System.Drawing.Color.White;
+            this.pnl_13Difficile.Location = new System.Drawing.Point(952, 65);
+            this.pnl_13Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_13Difficile.Name = "pnl_13Difficile";
+            this.pnl_13Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_13Difficile.TabIndex = 6;
+            // 
+            // pnl_1Difficile
+            // 
+            this.pnl_1Difficile.Location = new System.Drawing.Point(67, 237);
+            this.pnl_1Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_1Difficile.Name = "pnl_1Difficile";
+            this.pnl_1Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_1Difficile.TabIndex = 4;
+            // 
+            // pnl_5Difficile
+            // 
+            this.pnl_5Difficile.Location = new System.Drawing.Point(362, 65);
+            this.pnl_5Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_5Difficile.Name = "pnl_5Difficile";
+            this.pnl_5Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_5Difficile.TabIndex = 5;
+            // 
+            // pnl_12Difficile
+            // 
+            this.pnl_12Difficile.Location = new System.Drawing.Point(805, 256);
+            this.pnl_12Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_12Difficile.Name = "pnl_12Difficile";
+            this.pnl_12Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_12Difficile.TabIndex = 3;
+            // 
+            // pnl_7Difficile
+            // 
+            this.pnl_7Difficile.Location = new System.Drawing.Point(510, 65);
+            this.pnl_7Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_7Difficile.Name = "pnl_7Difficile";
+            this.pnl_7Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_7Difficile.TabIndex = 2;
+            // 
+            // pnl_3Difficile
+            // 
+            this.pnl_3Difficile.Location = new System.Drawing.Point(218, 65);
+            this.pnl_3Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_3Difficile.Name = "pnl_3Difficile";
+            this.pnl_3Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_3Difficile.TabIndex = 1;
+            // 
+            // pnl_2Difficile
+            // 
+            this.pnl_2Difficile.Location = new System.Drawing.Point(78, 65);
+            this.pnl_2Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_2Difficile.Name = "pnl_2Difficile";
+            this.pnl_2Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_2Difficile.TabIndex = 1;
+            // 
+            // pnl_15Difficile
+            // 
+            this.pnl_15Difficile.BackColor = System.Drawing.Color.White;
+            this.pnl_15Difficile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_15Difficile.Location = new System.Drawing.Point(1078, 65);
+            this.pnl_15Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_15Difficile.Name = "pnl_15Difficile";
+            this.pnl_15Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_15Difficile.TabIndex = 0;
+            // 
             // DifficoltàDifficile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -379,6 +379,7 @@
             this.Controls.Add(this.pnl_LayoutDifficile);
             this.Name = "DifficoltàDifficile";
             this.Text = "DifficoltàDifficile";
+            this.Load += new System.EventHandler(this.DifficoltàDifficile_Load);
             this.pnl_LayoutDifficile.ResumeLayout(false);
             this.ResumeLayout(false);
 
