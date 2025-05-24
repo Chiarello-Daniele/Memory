@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Memory
 {
-    public partial class DifficoltàDifficile: Form
+    public partial class DifficoltàDifficile : Form
     {
         List<Panel> caselleDifficile = new List<Panel>();
-        List<Image> immaginiDifficile= new List<Image>();
+        List<Image> immaginiDifficile = new List<Image>();
         List<int> idImmaginiDifficile = new List<int>();
 
         Panel primoPannello = null;
@@ -73,13 +73,113 @@ namespace Memory
             immaginiDifficile.Add(Properties.Resources.berlusca);
             immaginiDifficile.Add(Properties.Resources.sbanca);
             immaginiDifficile.Add(Properties.Resources.sbanca);
+            immaginiDifficile.Add(Properties.Resources.fius);
+            immaginiDifficile.Add(Properties.Resources.fius);
+            immaginiDifficile.Add(Properties.Resources.salvini);
+            immaginiDifficile.Add(Properties.Resources.salvini);
+            immaginiDifficile.Add(Properties.Resources.gerry);
+            immaginiDifficile.Add(Properties.Resources.gerry);
+            immaginiDifficile.Add(Properties.Resources.frene);
+            immaginiDifficile.Add(Properties.Resources.frene);
+            immaginiDifficile.Add(Properties.Resources.schetino);
+            immaginiDifficile.Add(Properties.Resources.schetino);
+            immaginiDifficile.Add(Properties.Resources.nana);
+            immaginiDifficile.Add(Properties.Resources.nana);
+            immaginiDifficile.Add(Properties.Resources.speed);
+            immaginiDifficile.Add(Properties.Resources.speed);
+            immaginiDifficile.Add(Properties.Resources.joker);
+            immaginiDifficile.Add(Properties.Resources.joker);
+            immaginiDifficile.Add(Properties.Resources.dipre);
+            immaginiDifficile.Add(Properties.Resources.dipre);
+            immaginiDifficile.Add(Properties.Resources.allegi);
+            immaginiDifficile.Add(Properties.Resources.allegi);
 
-
+            for (int i = 0; i < 16; i++)
+            {
+                idImmaginiDifficile.Add(i);
+                idImmaginiDifficile.Add(i);
+            }
+            Random rnd = new Random();
+            var zipped = immaginiDifficile.Zip(idImmaginiDifficile, (img, id) => new { img, id }).OrderBy(x => rnd.Next()).ToList();
+            immaginiDifficile = zipped.Select(x => x.img).ToList();
+            idImmaginiDifficile = zipped.Select(x => x.id).ToList();
+            for (int i = 0; i < caselleDifficile.Count; i++)
+            {
+                caselleDifficile[i].BackgroundImage = Properties.Resources.carta_removebg_preview1;
+                caselleDifficile[i].BackgroundImageLayout = ImageLayout.Stretch;
+                caselleDifficile[i].Controls.Clear();
+                caselleDifficile[i].Click += PannelloDifficile_Click;
+                caselleDifficile[i].Enabled = true;
+                caselleDifficile[i].Visible = true;
+            }
         }
-
-        private void DifficoltàDifficile_Load(object sender, EventArgs e)
+        private async void PannelloDifficile_Click(object sender, EventArgs e)
         {
+            if (blocco) return;
 
+            Panel pannello = sender as Panel;
+            if (pannello == null || pannello == primoPannello || pannello.Controls.Count > 0)
+                return;
+
+            int indice = caselleDifficile.IndexOf(pannello);
+            if (indice == -1) return;
+
+            // Mostra immagine
+            PictureBox pb = new PictureBox
+            {
+                Image = immaginiDifficile[indice],
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                Dock = DockStyle.Fill
+            };
+            pannello.Controls.Add(pb);
+            pannello.BackColor = Color.White;
+
+            if (primoPannello == null)
+            {
+                primoPannello = pannello;
+                indicePrimo = indice;
+                return;
+            }
+
+            secondoPannello = pannello;
+            indiceSecondo = indice;
+            blocco = true;
+
+            // Aspetta un secondo per far vedere la seconda immagine
+            await Task.Delay(1000);
+
+            if (idImmaginiDifficile[indicePrimo] == idImmaginiDifficile[indiceSecondo])
+            {
+                // Se le immagini sono uguali, disabilita e nascondi i pannelli
+                primoPannello.Controls.Clear();
+                secondoPannello.Controls.Clear();
+                primoPannello.Enabled = false;
+                secondoPannello.Enabled = false;
+                primoPannello.Visible = false;
+                secondoPannello.Visible = false;
+            }
+
+
+            else
+            {
+                // Se sono diverse, nascondi le immagini e resetta i colori
+                primoPannello.Controls.Clear();
+                secondoPannello.Controls.Clear();
+                primoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
+                secondoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
+            }
+
+            // Resetta lo stato
+            primoPannello = null;
+            secondoPannello = null;
+            indicePrimo = -1;
+            indiceSecondo = -1;
+            blocco = false;
         }
+
+
     }
+
+
 }
+
