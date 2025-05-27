@@ -21,48 +21,41 @@ namespace Memory
 
         private void btn_Facile_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DifficoltàFacile DifficoltàFacile = new DifficoltàFacile();
-                DifficoltàFacile.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Errore: " + ex.Message);
-
-            }
+           
         }
 
         private void btn_Medio_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DifficoltàMedia DifficoltàMedia = new DifficoltàMedia();
-                DifficoltàMedia.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Errore: " + ex.Message);
-            }
+          
         }
 
 
         private void btn_Difficile_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DifficoltàDifficile DifficoltàDifficile = new DifficoltàDifficile();
-                DifficoltàDifficile.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Errore: " + ex.Message);
-            }
+           
         }
 
         private void lbl_Titolo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Difficoltà_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Difficoltà Difficoltà = new Difficoltà();
+                Difficoltà.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore: " + ex.Message);
+            }
         }
 
         //prova
