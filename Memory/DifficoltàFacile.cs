@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Memory
 {
-    public partial class DifficoltàFacile: Form
+    public partial class DifficoltàFacile : Form
     {
         List<Panel> caselleFacile = new List<Panel>();
         List<Image> immaginiFacile = new List<Image>();
@@ -21,13 +18,28 @@ namespace Memory
         int indicePrimo = -1;
         int indiceSecondo = -1;
         bool blocco = false;
+
+        Timer timerGiocoFacile = new Timer();
+        int tempoRimanenteFacile = 60; // 1 minuto in secondi
+
         public DifficoltàFacile()
         {
             InitializeComponent();
+            timerGiocoFacile.Interval = 1000;
+            timerGiocoFacile.Tick += TimerGioco_Tick;
+
             IniziaGiocoFacile();
         }
+
         private void IniziaGiocoFacile()
         {
+            caselleFacile.Clear();
+            immaginiFacile.Clear();
+            idImmaginiFacile.Clear();
+
+            tempoRimanenteFacile = 60;
+            lblTempo.Text = "Tempo: 1:00";
+
             caselleFacile.Add(pnl_1Facile);
             caselleFacile.Add(pnl_2Facile);
             caselleFacile.Add(pnl_3Facile);
@@ -51,11 +63,12 @@ namespace Memory
                 idImmaginiFacile.Add(i);
                 idImmaginiFacile.Add(i);
             }
-            // Mischia le immagini
+
             Random rnd = new Random();
             var zipped = immaginiFacile.Zip(idImmaginiFacile, (img, id) => new { img, id }).OrderBy(x => rnd.Next()).ToList();
             immaginiFacile = zipped.Select(x => x.img).ToList();
             idImmaginiFacile = zipped.Select(x => x.id).ToList();
+
             for (int i = 0; i < caselleFacile.Count; i++)
             {
                 caselleFacile[i].BackgroundImage = Properties.Resources.carta_removebg_preview1;
@@ -65,7 +78,26 @@ namespace Memory
                 caselleFacile[i].Enabled = true;
                 caselleFacile[i].Visible = true;
             }
+
+            timerGiocoFacile.Start();
         }
+
+        private void TimerGioco_Tick(object sender, EventArgs e)
+        {
+            tempoRimanenteFacile--;
+
+            int minuti = tempoRimanenteFacile / 60;
+            int secondi = tempoRimanenteFacile % 60;
+            lblTempo.Text = $"Tempo: {minuti}:{secondi:D2}";
+
+            if (tempoRimanenteFacile <= 0)
+            {
+                timerGiocoFacile.Stop();
+                MessageBox.Show("Tempo scaduto! Hai perso!", "Sconfitta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                IniziaGiocoFacile();
+            }
+        }
+
         private async void PannelloFacile_Click(object sender, EventArgs e)
         {
             if (blocco) return;
@@ -77,7 +109,6 @@ namespace Memory
             int indice = caselleFacile.IndexOf(pannello);
             if (indice == -1) return;
 
-            // Mostra immagine
             PictureBox pb = new PictureBox
             {
                 Image = immaginiFacile[indice],
@@ -98,12 +129,10 @@ namespace Memory
             indiceSecondo = indice;
             blocco = true;
 
-            // Aspetta un secondo per far vedere la seconda immagine
             await Task.Delay(1000);
 
             if (idImmaginiFacile[indicePrimo] == idImmaginiFacile[indiceSecondo])
             {
-                // Se le immagini sono uguali, disabilita e nascondi i pannelli
                 primoPannello.Controls.Clear();
                 secondoPannello.Controls.Clear();
                 primoPannello.Enabled = false;
@@ -111,34 +140,33 @@ namespace Memory
                 primoPannello.Visible = false;
                 secondoPannello.Visible = false;
             }
-
-
             else
             {
-                // Se sono diverse, nascondi le immagini e resetta i colori
                 primoPannello.Controls.Clear();
                 secondoPannello.Controls.Clear();
                 primoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
                 secondoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
             }
 
-            // Resetta lo stato
             primoPannello = null;
             secondoPannello = null;
             indicePrimo = -1;
             indiceSecondo = -1;
             blocco = false;
+
+            if (caselleFacile.All(p => !p.Visible))
+            {
+                timerGiocoFacile.Stop();
+                int tempoUsato = 60 - tempoRimanenteFacile;
+                MessageBox.Show($"Hai vinto in {tempoUsato} secondi! Complimenti!", "Vittoria");
+                IniziaGiocoFacile();
+            }
         }
 
+        private void pnl_8Facile_Click(object sender, EventArgs e) { }
 
-        private void pnl_8Facile_Click(object sender, EventArgs e)
-        {
+        private void panel1_Paint(object sender, PaintEventArgs e) { }
 
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        private void DifficoltàFacile_Load(object sender, EventArgs e) { }
     }
 }

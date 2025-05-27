@@ -19,6 +19,9 @@ namespace Memory
         int indiceSecondo = -1;
         bool blocco = false;
 
+        Timer timerGiocoMedio = new Timer();
+        int tempoRimanenteMedio = 60;
+
         public DifficoltàMedia()
         {
             InitializeComponent();
@@ -27,6 +30,12 @@ namespace Memory
 
         private void IniziaGiocoMedio()
         {
+            caselleMedio.Clear();
+            immaginiMedio.Clear();
+            idImmaginiMedio.Clear();
+            tempoRimanenteMedio = 90;
+            lblTimer.Text = "Tempo: 1:30";
+
             // Aggiungi i 16 pannelli alla lista (assicurati che esistano nel Form Designer)
             caselleMedio.Add(pnl_1Medio);
             caselleMedio.Add(pnl_2Medio);
@@ -62,6 +71,7 @@ namespace Memory
             immaginiMedio.Add(Properties.Resources.DonkeyKong);
             immaginiMedio.Add(Properties.Resources.bowser);
             immaginiMedio.Add(Properties.Resources.bowser);
+
             // Crea ID per ogni immagine (due uguali per ogni coppia)
             for (int i = 0; i < 8; i++)
             {
@@ -81,9 +91,32 @@ namespace Memory
                 caselleMedio[i].BackgroundImage = Properties.Resources.carta_removebg_preview1;
                 caselleMedio[i].BackgroundImageLayout = ImageLayout.Stretch;
                 caselleMedio[i].Controls.Clear();
+                caselleMedio[i].Click -= Pannello_Click; // rimuovi eventuali eventi per evitare duplicati
                 caselleMedio[i].Click += Pannello_Click;
                 caselleMedio[i].Enabled = true;
                 caselleMedio[i].Visible = true;
+            }
+
+            // Imposta e avvia il timer una sola volta
+            timerGiocoMedio.Interval = 1000; // 1 secondo
+            timerGiocoMedio.Tick -= TimerGioco_Tick; // rimuovi eventuali associazioni per evitare duplicati
+            timerGiocoMedio.Tick += TimerGioco_Tick;
+            timerGiocoMedio.Start();
+        }
+
+        private void TimerGioco_Tick(object sender, EventArgs e)
+        {
+            tempoRimanenteMedio--;
+
+            int minuti = tempoRimanenteMedio / 60;
+            int secondi = tempoRimanenteMedio % 60;
+            lblTimer.Text = $"Tempo: {minuti}:{secondi:D2}";
+
+            if (tempoRimanenteMedio <= 0)
+            {
+                timerGiocoMedio.Stop();
+                MessageBox.Show("Tempo scaduto! Hai perso!", "Sconfitta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                IniziaGiocoMedio();
             }
         }
 
@@ -132,8 +165,6 @@ namespace Memory
                 primoPannello.Visible = false;
                 secondoPannello.Visible = false;
             }
-
-        
             else
             {
                 // Se sono diverse, nascondi le immagini e resetta i colori
@@ -149,6 +180,14 @@ namespace Memory
             indicePrimo = -1;
             indiceSecondo = -1;
             blocco = false;
+
+            if (caselleMedio.All(p => !p.Visible))
+            {
+                timerGiocoMedio.Stop();
+                int tempoUsato = 90 - tempoRimanenteMedio;
+                MessageBox.Show($"Hai vinto in {tempoUsato} secondi! Complimenti!", "Vittoria");
+                IniziaGiocoMedio(); // Riavvia il gioco
+            }
         }
     }
 }

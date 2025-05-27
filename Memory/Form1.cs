@@ -21,18 +21,18 @@ namespace Memory
 
         private void btn_Facile_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btn_Medio_Click(object sender, EventArgs e)
         {
-          
+
         }
 
 
         private void btn_Difficile_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void lbl_Titolo_Click(object sender, EventArgs e)
@@ -68,10 +68,11 @@ namespace Memory
             catch (Exception ex)
             {
                 MessageBox.Show("Errore: " + ex.Message);
-              
 
+
+            }
+
+            //prova
         }
-
-        //prova
     }
 }

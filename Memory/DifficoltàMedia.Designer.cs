@@ -45,12 +45,14 @@
             this.pnl_3Medio = new System.Windows.Forms.Panel();
             this.pnl_2Medio = new System.Windows.Forms.Panel();
             this.pnl_1Medio = new System.Windows.Forms.Panel();
+            this.lblTimer = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.lblTimer);
             this.panel1.Controls.Add(this.pnl_13Medio);
             this.panel1.Controls.Add(this.pnl_14Medio);
             this.panel1.Controls.Add(this.pnl_15Medio);
@@ -222,6 +224,15 @@
             this.pnl_1Medio.TabIndex = 0;
             this.pnl_1Medio.Click += new System.EventHandler(this.Pannello_Click);
             // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Location = new System.Drawing.Point(145, 37);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(44, 16);
+            this.lblTimer.TabIndex = 14;
+            this.lblTimer.Text = "label1";
+            // 
             // DifficoltàMedia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -232,6 +243,7 @@
             this.Name = "DifficoltàMedia";
             this.Text = "DifficoltàMedia";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -255,5 +267,6 @@
         private System.Windows.Forms.Panel pnl_9Medio;
         private System.Windows.Forms.Panel pnl_10Medio;
         private System.Windows.Forms.Panel pnl_12Medio;
+        private System.Windows.Forms.Label lblTimer;
     }
 }
