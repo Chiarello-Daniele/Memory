@@ -58,6 +58,20 @@ namespace Memory
             }
         }
 
+        private void btn_Regole_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Regole Regole = new Regole();
+                Regole.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore: " + ex.Message);
+              
+
+        }
+
         //prova
     }
 }

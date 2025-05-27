@@ -92,6 +92,7 @@
             this.btn_Regole.TabIndex = 6;
             this.btn_Regole.Text = "Regole";
             this.btn_Regole.UseVisualStyleBackColor = true;
+            this.btn_Regole.Click += new System.EventHandler(this.btn_Regole_Click);
             // 
             // Form1
             // 
