@@ -189,5 +189,10 @@ namespace Memory
                 IniziaGiocoMedio(); // Riavvia il gioco
             }
         }
+
+        private void DifficoltàMedia_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

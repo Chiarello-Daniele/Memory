@@ -29,44 +29,59 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Regole));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_regole = new System.Windows.Forms.Panel();
             this.lbl_Regole = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.lbl_regoletitolo = new System.Windows.Forms.Label();
+            this.pnl_regole.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnl_regole
             // 
-            this.panel1.Controls.Add(this.lbl_Regole);
-            this.panel1.Location = new System.Drawing.Point(88, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(595, 434);
-            this.panel1.TabIndex = 0;
+            this.pnl_regole.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_regole.BackgroundImage")));
+            this.pnl_regole.Controls.Add(this.lbl_regoletitolo);
+            this.pnl_regole.Controls.Add(this.lbl_Regole);
+            this.pnl_regole.Location = new System.Drawing.Point(-2, 1);
+            this.pnl_regole.Name = "pnl_regole";
+            this.pnl_regole.Size = new System.Drawing.Size(882, 533);
+            this.pnl_regole.TabIndex = 0;
             // 
             // lbl_Regole
             // 
-            this.lbl_Regole.Location = new System.Drawing.Point(20, 15);
+            this.lbl_Regole.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Regole.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Regole.Location = new System.Drawing.Point(14, 116);
             this.lbl_Regole.Name = "lbl_Regole";
-            this.lbl_Regole.Size = new System.Drawing.Size(358, 419);
+            this.lbl_Regole.Size = new System.Drawing.Size(828, 355);
             this.lbl_Regole.TabIndex = 0;
             this.lbl_Regole.Text = resources.GetString("lbl_Regole.Text");
-            this.lbl_Regole.Click += new System.EventHandler(this.lbl_Regole_Click);
+            // 
+            // lbl_regoletitolo
+            // 
+            this.lbl_regoletitolo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_regoletitolo.Font = new System.Drawing.Font("Reem Kufi", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_regoletitolo.Location = new System.Drawing.Point(284, 17);
+            this.lbl_regoletitolo.Name = "lbl_regoletitolo";
+            this.lbl_regoletitolo.Size = new System.Drawing.Size(260, 89);
+            this.lbl_regoletitolo.TabIndex = 1;
+            this.lbl_regoletitolo.Text = "REGOLE";
             // 
             // Regole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(866, 521);
+            this.Controls.Add(this.pnl_regole);
             this.Name = "Regole";
             this.Text = "Regole";
-            this.panel1.ResumeLayout(false);
+            this.pnl_regole.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_regole;
         private System.Windows.Forms.Label lbl_Regole;
+        private System.Windows.Forms.Label lbl_regoletitolo;
     }
 }

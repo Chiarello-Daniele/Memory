@@ -17,9 +17,6 @@ namespace Memory
             InitializeComponent();
         }
 
-        private void lbl_Regole_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
