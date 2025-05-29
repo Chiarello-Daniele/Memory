@@ -187,5 +187,10 @@ namespace Memory
                 IniziaGiocoDifficile();
             }
         }
+
+        private void DifficoltàDifficile_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

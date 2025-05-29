@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Memory
@@ -30,13 +28,15 @@ namespace Memory
 
         private void IniziaGiocoMedio()
         {
+            // Pulisci liste e resetta timer
             caselleMedio.Clear();
             immaginiMedio.Clear();
             idImmaginiMedio.Clear();
+
             tempoRimanenteMedio = 90;
             lblTimer.Text = "Tempo: 1:30";
 
-            // Aggiungi i 16 pannelli alla lista (assicurati che esistano nel Form Designer)
+            // Aggiungi i pannelli alla lista
             caselleMedio.Add(pnl_1Medio);
             caselleMedio.Add(pnl_2Medio);
             caselleMedio.Add(pnl_3Medio);
@@ -54,54 +54,91 @@ namespace Memory
             caselleMedio.Add(pnl_15Medio);
             caselleMedio.Add(pnl_16Medio);
 
-            // Carica immagini (2 per tipo)
-            immaginiMedio.Add(Properties.Resources.Mario);
-            immaginiMedio.Add(Properties.Resources.Mario);
-            immaginiMedio.Add(Properties.Resources.Luigi);
-            immaginiMedio.Add(Properties.Resources.Luigi);
-            immaginiMedio.Add(Properties.Resources.Peach);
-            immaginiMedio.Add(Properties.Resources.Peach);
-            immaginiMedio.Add(Properties.Resources.Wario);
-            immaginiMedio.Add(Properties.Resources.Wario);
-            immaginiMedio.Add(Properties.Resources.Yoshy);
-            immaginiMedio.Add(Properties.Resources.Yoshy);
-            immaginiMedio.Add(Properties.Resources.Toad);
-            immaginiMedio.Add(Properties.Resources.Toad);
-            immaginiMedio.Add(Properties.Resources.DonkeyKong);
-            immaginiMedio.Add(Properties.Resources.DonkeyKong);
-            immaginiMedio.Add(Properties.Resources.bowser);
-            immaginiMedio.Add(Properties.Resources.bowser);
+            // Carica le immagini due volte per ogni personaggio
+            for (int i = 0; i < 2; i++) immaginiMedio.Add(Properties.Resources.Mario);
+            for (int i = 0; i < 2; i++) immaginiMedio.Add(Properties.Resources.Luigi);
+            for (int i = 0; i < 2; i++) immaginiMedio.Add(Properties.Resources.Peach);
+            for (int i = 0; i < 2; i++) immaginiMedio.Add(Properties.Resources.Wario);
+            for (int i = 0; i < 2; i++) immaginiMedio.Add(Properties.Resources.Yoshy);
+            for (int i = 0; i < 2; i++) immaginiMedio.Add(Properties.Resources.Toad);
+            for (int i = 0; i < 2; i++) immaginiMedio.Add(Properties.Resources.DonkeyKong);
+            for (int i = 0; i < 2; i++) immaginiMedio.Add(Properties.Resources.bowser);
 
-            // Crea ID per ogni immagine (due uguali per ogni coppia)
+            // Crea gli ID (due uguali per coppia)
             for (int i = 0; i < 8; i++)
             {
                 idImmaginiMedio.Add(i);
                 idImmaginiMedio.Add(i);
             }
 
-            // Mischia le immagini
+            // Mischia immagini e ID usando un array di indici ordinati casualmente
             Random rnd = new Random();
-            var zipped = immaginiMedio.Zip(idImmaginiMedio, (img, id) => new { img, id }).OrderBy(x => rnd.Next()).ToList();
-            immaginiMedio = zipped.Select(x => x.img).ToList();
-            idImmaginiMedio = zipped.Select(x => x.id).ToList();
+            int n = immaginiMedio.Count;
 
-            // Inizializza i pannelli
+            int[] indices = new int[n];
+            for (int i = 0; i < n; i++)
+                indices[i] = i;
+
+            int[] randomKeys = new int[n];
+            for (int i = 0; i < n; i++)
+                randomKeys[i] = rnd.Next();
+
+            // Bubble sort semplice per ordinare gli indici secondo randomKeys
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (randomKeys[i] > randomKeys[j])
+                    {
+                        // Scambia chiavi
+                        int tempKey = randomKeys[i];
+                        randomKeys[i] = randomKeys[j];
+                        randomKeys[j] = tempKey;
+
+                        // Scambia indici
+                        int tempIdx = indices[i];
+                        indices[i] = indices[j];
+                        indices[j] = tempIdx;
+                    }
+                }
+            }
+
+            // Ricostruisci le liste mischiate
+            List<Image> immaginiMischiate = new List<Image>();
+            List<int> idMischiati = new List<int>();
+            for (int i = 0; i < n; i++)
+            {
+                immaginiMischiate.Add(immaginiMedio[indices[i]]);
+                idMischiati.Add(idImmaginiMedio[indices[i]]);
+            }
+
+            immaginiMedio = immaginiMischiate;
+            idImmaginiMedio = idMischiati;
+
+            // Imposta pannelli con immagine copertura e abilitali
             for (int i = 0; i < caselleMedio.Count; i++)
             {
                 caselleMedio[i].BackgroundImage = Properties.Resources.carta_removebg_preview1;
                 caselleMedio[i].BackgroundImageLayout = ImageLayout.Stretch;
                 caselleMedio[i].Controls.Clear();
-                caselleMedio[i].Click -= Pannello_Click; // rimuovi eventuali eventi per evitare duplicati
+                caselleMedio[i].Click -= Pannello_Click;
                 caselleMedio[i].Click += Pannello_Click;
                 caselleMedio[i].Enabled = true;
                 caselleMedio[i].Visible = true;
             }
 
-            // Imposta e avvia il timer una sola volta
+            // Timer setup
             timerGiocoMedio.Interval = 1000; // 1 secondo
-            timerGiocoMedio.Tick -= TimerGioco_Tick; // rimuovi eventuali associazioni per evitare duplicati
+            timerGiocoMedio.Tick -= TimerGioco_Tick;
             timerGiocoMedio.Tick += TimerGioco_Tick;
             timerGiocoMedio.Start();
+
+            // Resetta variabili di gioco
+            primoPannello = null;
+            secondoPannello = null;
+            indicePrimo = -1;
+            indiceSecondo = -1;
+            blocco = false;
         }
 
         private void TimerGioco_Tick(object sender, EventArgs e)
@@ -110,7 +147,7 @@ namespace Memory
 
             int minuti = tempoRimanenteMedio / 60;
             int secondi = tempoRimanenteMedio % 60;
-            lblTimer.Text = $"Tempo: {minuti}:{secondi:D2}";
+            lblTimer.Text = "Tempo: " + minuti + ":" + secondi.ToString("D2");
 
             if (tempoRimanenteMedio <= 0)
             {
@@ -125,19 +162,27 @@ namespace Memory
             if (blocco) return;
 
             Panel pannello = sender as Panel;
-            if (pannello == null || pannello == primoPannello || pannello.Controls.Count > 0)
-                return;
+            if (pannello == null) return;
+            if (pannello == primoPannello) return;
+            if (pannello.Controls.Count > 0) return;
 
-            int indice = caselleMedio.IndexOf(pannello);
+            int indice = -1;
+            for (int i = 0; i < caselleMedio.Count; i++)
+            {
+                if (caselleMedio[i] == pannello)
+                {
+                    indice = i;
+                    break;
+                }
+            }
             if (indice == -1) return;
 
             // Mostra immagine
-            PictureBox pb = new PictureBox
-            {
-                Image = immaginiMedio[indice],
-                SizeMode = PictureBoxSizeMode.StretchImage,
-                Dock = DockStyle.Fill
-            };
+            PictureBox pb = new PictureBox();
+            pb.Image = immaginiMedio[indice];
+            pb.SizeMode = PictureBoxSizeMode.StretchImage;
+            pb.Dock = DockStyle.Fill;
+
             pannello.Controls.Add(pb);
             pannello.BackColor = Color.White;
 
@@ -152,12 +197,11 @@ namespace Memory
             indiceSecondo = indice;
             blocco = true;
 
-            // Aspetta un secondo per far vedere la seconda immagine
-            await Task.Delay(1000);
+            await System.Threading.Tasks.Task.Delay(1000);
 
             if (idImmaginiMedio[indicePrimo] == idImmaginiMedio[indiceSecondo])
             {
-                // Se le immagini sono uguali, disabilita e nascondi i pannelli
+                // Se corrispondono, nascondi i pannelli
                 primoPannello.Controls.Clear();
                 secondoPannello.Controls.Clear();
                 primoPannello.Enabled = false;
@@ -167,32 +211,42 @@ namespace Memory
             }
             else
             {
-                // Se sono diverse, nascondi le immagini e resetta i colori
+                // Se non corrispondono, copri di nuovo le immagini
                 primoPannello.Controls.Clear();
                 secondoPannello.Controls.Clear();
                 primoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
                 secondoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
             }
 
-            // Resetta lo stato
             primoPannello = null;
             secondoPannello = null;
             indicePrimo = -1;
             indiceSecondo = -1;
             blocco = false;
 
-            if (caselleMedio.All(p => !p.Visible))
+            // Controlla se il gioco è finito (tutti i pannelli nascosti)
+            bool finito = true;
+            for (int i = 0; i < caselleMedio.Count; i++)
+            {
+                if (caselleMedio[i].Visible == true)
+                {
+                    finito = false;
+                    break;
+                }
+            }
+
+            if (finito)
             {
                 timerGiocoMedio.Stop();
                 int tempoUsato = 90 - tempoRimanenteMedio;
-                MessageBox.Show($"Hai vinto in {tempoUsato} secondi! Complimenti!", "Vittoria");
-                IniziaGiocoMedio(); // Riavvia il gioco
+                MessageBox.Show("Hai vinto in " + tempoUsato + " secondi! Complimenti!", "Vittoria");
+                IniziaGiocoMedio();
             }
         }
 
         private void DifficoltàMedia_Load(object sender, EventArgs e)
         {
-
+            // Puoi mettere codice di inizializzazione qui, se serve
         }
     }
 }

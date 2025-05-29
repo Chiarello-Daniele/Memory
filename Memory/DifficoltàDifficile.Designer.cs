@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnl_LayoutDifficile = new System.Windows.Forms.Panel();
+            this.lbl_TitoloFacile = new System.Windows.Forms.Label();
             this.lblTimerDifficile = new System.Windows.Forms.Label();
             this.pnl_30Difficile = new System.Windows.Forms.Panel();
             this.pnl_24Difficile = new System.Windows.Forms.Panel();
@@ -36,6 +37,7 @@
             this.pnl_20Difficile = new System.Windows.Forms.Panel();
             this.pnl_27Difficile = new System.Windows.Forms.Panel();
             this.pnl_32Difficile = new System.Windows.Forms.Panel();
+            this.pnl_25Difficile = new System.Windows.Forms.Panel();
             this.pnl_26Difficile = new System.Windows.Forms.Panel();
             this.pnl_29Difficile = new System.Windows.Forms.Panel();
             this.pnl_18Difficile = new System.Windows.Forms.Panel();
@@ -51,6 +53,7 @@
             this.pnl_4Difficile = new System.Windows.Forms.Panel();
             this.pnl_11Difficile = new System.Windows.Forms.Panel();
             this.pnl_16Difficile = new System.Windows.Forms.Panel();
+            this.pnl_9Difficile = new System.Windows.Forms.Panel();
             this.pnl_10Difficile = new System.Windows.Forms.Panel();
             this.pnl_13Difficile = new System.Windows.Forms.Panel();
             this.pnl_1Difficile = new System.Windows.Forms.Panel();
@@ -60,9 +63,6 @@
             this.pnl_3Difficile = new System.Windows.Forms.Panel();
             this.pnl_2Difficile = new System.Windows.Forms.Panel();
             this.pnl_15Difficile = new System.Windows.Forms.Panel();
-            this.pnl_25Difficile = new System.Windows.Forms.Panel();
-            this.pnl_9Difficile = new System.Windows.Forms.Panel();
-            this.lbl_TitoloFacile = new System.Windows.Forms.Label();
             this.pnl_LayoutDifficile.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +109,16 @@
             this.pnl_LayoutDifficile.Name = "pnl_LayoutDifficile";
             this.pnl_LayoutDifficile.Size = new System.Drawing.Size(1379, 884);
             this.pnl_LayoutDifficile.TabIndex = 1;
+            // 
+            // lbl_TitoloFacile
+            // 
+            this.lbl_TitoloFacile.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TitoloFacile.Font = new System.Drawing.Font("Reem Kufi", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TitoloFacile.Location = new System.Drawing.Point(434, 34);
+            this.lbl_TitoloFacile.Name = "lbl_TitoloFacile";
+            this.lbl_TitoloFacile.Size = new System.Drawing.Size(648, 74);
+            this.lbl_TitoloFacile.TabIndex = 31;
+            this.lbl_TitoloFacile.Text = "DIFFICOLTA\' DIFFICILE";
             // 
             // lblTimerDifficile
             // 
@@ -168,6 +178,15 @@
             this.pnl_32Difficile.Name = "pnl_32Difficile";
             this.pnl_32Difficile.Size = new System.Drawing.Size(120, 150);
             this.pnl_32Difficile.TabIndex = 24;
+            // 
+            // pnl_25Difficile
+            // 
+            this.pnl_25Difficile.BackgroundImage = global::Memory.Properties.Resources.carta_removebg_preview;
+            this.pnl_25Difficile.Location = new System.Drawing.Point(700, 515);
+            this.pnl_25Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_25Difficile.Name = "pnl_25Difficile";
+            this.pnl_25Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_25Difficile.TabIndex = 25;
             // 
             // pnl_26Difficile
             // 
@@ -293,6 +312,15 @@
             this.pnl_16Difficile.Size = new System.Drawing.Size(120, 150);
             this.pnl_16Difficile.TabIndex = 8;
             // 
+            // pnl_9Difficile
+            // 
+            this.pnl_9Difficile.BackgroundImage = global::Memory.Properties.Resources.carta_removebg_preview;
+            this.pnl_9Difficile.Location = new System.Drawing.Point(700, 171);
+            this.pnl_9Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_9Difficile.Name = "pnl_9Difficile";
+            this.pnl_9Difficile.Size = new System.Drawing.Size(120, 150);
+            this.pnl_9Difficile.TabIndex = 9;
+            // 
             // pnl_10Difficile
             // 
             this.pnl_10Difficile.Location = new System.Drawing.Point(700, 342);
@@ -368,34 +396,6 @@
             this.pnl_15Difficile.Size = new System.Drawing.Size(120, 150);
             this.pnl_15Difficile.TabIndex = 0;
             // 
-            // pnl_25Difficile
-            // 
-            this.pnl_25Difficile.BackgroundImage = global::Memory.Properties.Resources.carta_removebg_preview;
-            this.pnl_25Difficile.Location = new System.Drawing.Point(700, 515);
-            this.pnl_25Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_25Difficile.Name = "pnl_25Difficile";
-            this.pnl_25Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_25Difficile.TabIndex = 25;
-            // 
-            // pnl_9Difficile
-            // 
-            this.pnl_9Difficile.BackgroundImage = global::Memory.Properties.Resources.carta_removebg_preview;
-            this.pnl_9Difficile.Location = new System.Drawing.Point(700, 171);
-            this.pnl_9Difficile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_9Difficile.Name = "pnl_9Difficile";
-            this.pnl_9Difficile.Size = new System.Drawing.Size(120, 150);
-            this.pnl_9Difficile.TabIndex = 9;
-            // 
-            // lbl_TitoloFacile
-            // 
-            this.lbl_TitoloFacile.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_TitoloFacile.Font = new System.Drawing.Font("Reem Kufi", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TitoloFacile.Location = new System.Drawing.Point(434, 34);
-            this.lbl_TitoloFacile.Name = "lbl_TitoloFacile";
-            this.lbl_TitoloFacile.Size = new System.Drawing.Size(648, 74);
-            this.lbl_TitoloFacile.TabIndex = 31;
-            this.lbl_TitoloFacile.Text = "DIFFICOLTA\' DIFFICILE";
-            // 
             // DifficoltàDifficile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -405,6 +405,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DifficoltàDifficile";
             this.Text = "DifficoltàDifficile";
+            
             this.pnl_LayoutDifficile.ResumeLayout(false);
             this.pnl_LayoutDifficile.PerformLayout();
             this.ResumeLayout(false);
