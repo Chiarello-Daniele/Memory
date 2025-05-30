@@ -36,39 +36,76 @@ namespace Memory
             tempoRimanenteDifficile = 120;
             lblTimerDifficile.Text = "Tempo: 2:00";
 
-            // Aggiungi i 32 pannelli
-            caselleDifficile.AddRange(new Panel[]
-            {
-                pnl_1Difficile, pnl_2Difficile, pnl_3Difficile, pnl_4Difficile,
-                pnl_5Difficile, pnl_6Difficile, pnl_7Difficile, pnl_8Difficile,
-                pnl_9Difficile, pnl_10Difficile, pnl_11Difficile, pnl_12Difficile,
-                pnl_13Difficile, pnl_14Difficile, pnl_15Difficile, pnl_16Difficile,
-                pnl_17Difficile, pnl_18Difficile, pnl_19Difficile, pnl_20Difficile,
-                pnl_21Difficile, pnl_22Difficile, pnl_23Difficile, pnl_24Difficile,
-                pnl_25Difficile, pnl_26Difficile, pnl_27Difficile, pnl_28Difficile,
-                pnl_29Difficile, pnl_30Difficile, pnl_31Difficile, pnl_32Difficile
-            });
+            //// Aggiungi i 32 pannelli
+            caselleDifficile.Add(pnl_1Difficile);
+            caselleDifficile.Add(pnl_2Difficile);
+            caselleDifficile.Add(pnl_3Difficile);
+            caselleDifficile.Add(pnl_4Difficile);
+            caselleDifficile.Add(pnl_5Difficile);
+            caselleDifficile.Add(pnl_6Difficile);
+            caselleDifficile.Add(pnl_7Difficile);
+            caselleDifficile.Add(pnl_8Difficile);
+            caselleDifficile.Add(pnl_9Difficile);
+            caselleDifficile.Add(pnl_10Difficile);
+            caselleDifficile.Add(pnl_11Difficile);
+            caselleDifficile.Add(pnl_12Difficile);
+            caselleDifficile.Add(pnl_13Difficile);
+            caselleDifficile.Add(pnl_14Difficile);
+            caselleDifficile.Add(pnl_15Difficile);
+            caselleDifficile.Add(pnl_16Difficile);
+            caselleDifficile.Add(pnl_17Difficile);
+            caselleDifficile.Add(pnl_18Difficile);
+            caselleDifficile.Add(pnl_19Difficile);
+            caselleDifficile.Add(pnl_20Difficile);
+            caselleDifficile.Add(pnl_21Difficile);
+            caselleDifficile.Add(pnl_22Difficile);
+            caselleDifficile.Add(pnl_23Difficile);
+            caselleDifficile.Add(pnl_24Difficile);
+            caselleDifficile.Add(pnl_25Difficile);
+            caselleDifficile.Add(pnl_26Difficile);
+            caselleDifficile.Add(pnl_27Difficile);
+            caselleDifficile.Add(pnl_28Difficile);
+            caselleDifficile.Add(pnl_29Difficile);
+            caselleDifficile.Add(pnl_30Difficile);
+            caselleDifficile.Add(pnl_31Difficile);
+            caselleDifficile.Add(pnl_32Difficile);
+            // Aggiungi immagini (2 copie per tipo)
+            immaginiDifficile.Add(Properties.Resources.cicciogamer);
+            immaginiDifficile.Add(Properties.Resources.cicciogamer);
+            immaginiDifficile.Add(Properties.Resources.marza);
+            immaginiDifficile.Add(Properties.Resources.marza);
+            immaginiDifficile.Add(Properties.Resources.blur);
+            immaginiDifficile.Add(Properties.Resources.blur);
+            immaginiDifficile.Add(Properties.Resources.corona);
+            immaginiDifficile.Add(Properties.Resources.corona);
+            immaginiDifficile.Add(Properties.Resources.berlusca);
+            immaginiDifficile.Add(Properties.Resources.berlusca);
+            immaginiDifficile.Add(Properties.Resources.sbanca);
+            immaginiDifficile.Add(Properties.Resources.sbanca);
+            immaginiDifficile.Add(Properties.Resources.fius);
+            immaginiDifficile.Add(Properties.Resources.fius);
+            immaginiDifficile.Add(Properties.Resources.salvini);
+            immaginiDifficile.Add(Properties.Resources.salvini);
+            immaginiDifficile.Add(Properties.Resources.gerry);
+            immaginiDifficile.Add(Properties.Resources.gerry);
+            immaginiDifficile.Add(Properties.Resources.frene);
+            immaginiDifficile.Add(Properties.Resources.frene);
+            immaginiDifficile.Add(Properties.Resources.schetino);
+            immaginiDifficile.Add(Properties.Resources.schetino);
+            immaginiDifficile.Add(Properties.Resources.nana);
+            immaginiDifficile.Add(Properties.Resources.nana);
+            immaginiDifficile.Add(Properties.Resources.speed);
+            immaginiDifficile.Add(Properties.Resources.speed);
+            immaginiDifficile.Add(Properties.Resources.joker);
+            immaginiDifficile.Add(Properties.Resources.joker);
+            immaginiDifficile.Add(Properties.Resources.dipre);
+            immaginiDifficile.Add(Properties.Resources.dipre);
+            immaginiDifficile.Add(Properties.Resources.allegi);
+            immaginiDifficile.Add(Properties.Resources.allegi);
+
 
             // Aggiungi immagini (2 copie per tipo)
-            immaginiDifficile.AddRange(new Image[]
-            {
-                Properties.Resources.cicciogamer, Properties.Resources.cicciogamer,
-                Properties.Resources.marza, Properties.Resources.marza,
-                Properties.Resources.blur, Properties.Resources.blur,
-                Properties.Resources.corona, Properties.Resources.corona,
-                Properties.Resources.berlusca, Properties.Resources.berlusca,
-                Properties.Resources.sbanca, Properties.Resources.sbanca,
-                Properties.Resources.fius, Properties.Resources.fius,
-                Properties.Resources.salvini, Properties.Resources.salvini,
-                Properties.Resources.gerry, Properties.Resources.gerry,
-                Properties.Resources.frene, Properties.Resources.frene,
-                Properties.Resources.schetino, Properties.Resources.schetino,
-                Properties.Resources.nana, Properties.Resources.nana,
-                Properties.Resources.speed, Properties.Resources.speed,
-                Properties.Resources.joker, Properties.Resources.joker,
-                Properties.Resources.dipre, Properties.Resources.dipre,
-                Properties.Resources.allegi, Properties.Resources.allegi
-            });
+      
 
             // Crea ID immagini (due per ciascuna immagine)
             for (int i = 0; i < 16; i++)

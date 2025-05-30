@@ -37,8 +37,8 @@ namespace Memory
             immaginiFacile.Clear();
             idImmaginiFacile.Clear();
 
-            tempoRimanenteFacile = 60;
-            lblTempo.Text = "Tempo: 1:00";
+            tempoRimanenteFacile = 30;
+            lblTempo.Text = "Tempo: 00:30";
 
             caselleFacile.Add(pnl_1Facile);
             caselleFacile.Add(pnl_2Facile);
@@ -63,11 +63,12 @@ namespace Memory
                 idImmaginiFacile.Add(i);
                 idImmaginiFacile.Add(i);
             }
-
-            Random rnd = new Random();
-            var zipped = immaginiFacile.Zip(idImmaginiFacile, (img, id) => new { img, id }).OrderBy(x => rnd.Next()).ToList();
-            immaginiFacile = zipped.Select(x => x.img).ToList();
-            idImmaginiFacile = zipped.Select(x => x.id).ToList();
+            for (int i = 0; i < 2; i++) immaginiFacile.Add(Properties.Resources.spiderman);
+            for (int i = 0; i < 2; i++) immaginiFacile.Add(Properties.Resources.ironman);
+            for (int i = 0; i < 2; i++) immaginiFacile.Add(Properties.Resources.superman);
+            for (int i = 0; i < 2; i++) immaginiFacile.Add(Properties.Resources.flash);
+         
+          
 
             for (int i = 0; i < caselleFacile.Count; i++)
             {
