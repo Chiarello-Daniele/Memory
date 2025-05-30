@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -36,7 +35,7 @@ namespace Memory
             tempoRimanenteDifficile = 120;
             lblTimerDifficile.Text = "Tempo: 2:00";
 
-            //// Aggiungi i 32 pannelli
+            // Aggiungi i 32 pannelli
             caselleDifficile.Add(pnl_1Difficile);
             caselleDifficile.Add(pnl_2Difficile);
             caselleDifficile.Add(pnl_3Difficile);
@@ -69,43 +68,24 @@ namespace Memory
             caselleDifficile.Add(pnl_30Difficile);
             caselleDifficile.Add(pnl_31Difficile);
             caselleDifficile.Add(pnl_32Difficile);
-            // Aggiungi immagini (2 copie per tipo)
-            immaginiDifficile.Add(Properties.Resources.cicciogamer);
-            immaginiDifficile.Add(Properties.Resources.cicciogamer);
-            immaginiDifficile.Add(Properties.Resources.marza);
-            immaginiDifficile.Add(Properties.Resources.marza);
-            immaginiDifficile.Add(Properties.Resources.blur);
-            immaginiDifficile.Add(Properties.Resources.blur);
-            immaginiDifficile.Add(Properties.Resources.corona);
-            immaginiDifficile.Add(Properties.Resources.corona);
-            immaginiDifficile.Add(Properties.Resources.berlusca);
-            immaginiDifficile.Add(Properties.Resources.berlusca);
-            immaginiDifficile.Add(Properties.Resources.sbanca);
-            immaginiDifficile.Add(Properties.Resources.sbanca);
-            immaginiDifficile.Add(Properties.Resources.fius);
-            immaginiDifficile.Add(Properties.Resources.fius);
-            immaginiDifficile.Add(Properties.Resources.salvini);
-            immaginiDifficile.Add(Properties.Resources.salvini);
-            immaginiDifficile.Add(Properties.Resources.gerry);
-            immaginiDifficile.Add(Properties.Resources.gerry);
-            immaginiDifficile.Add(Properties.Resources.frene);
-            immaginiDifficile.Add(Properties.Resources.frene);
-            immaginiDifficile.Add(Properties.Resources.schetino);
-            immaginiDifficile.Add(Properties.Resources.schetino);
-            immaginiDifficile.Add(Properties.Resources.nana);
-            immaginiDifficile.Add(Properties.Resources.nana);
-            immaginiDifficile.Add(Properties.Resources.speed);
-            immaginiDifficile.Add(Properties.Resources.speed);
-            immaginiDifficile.Add(Properties.Resources.joker);
-            immaginiDifficile.Add(Properties.Resources.joker);
-            immaginiDifficile.Add(Properties.Resources.dipre);
-            immaginiDifficile.Add(Properties.Resources.dipre);
-            immaginiDifficile.Add(Properties.Resources.allegi);
-            immaginiDifficile.Add(Properties.Resources.allegi);
 
-
-            // Aggiungi immagini (2 copie per tipo)
-      
+            // Aggiungi immagini 2 copie per tipo
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.cicciogamer);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.marza);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.blur);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.corona);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.berlusca);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.sbanca);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.fius);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.salvini);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.gerry);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.frene);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.schetino);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.nana);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.speed);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.joker);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.dipre);
+            for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.allegi);
 
             // Crea ID immagini (due per ciascuna immagine)
             for (int i = 0; i < 16; i++)
@@ -114,14 +94,23 @@ namespace Memory
                 idImmaginiDifficile.Add(i);
             }
 
-            // Mischia le immagini
+            // Mischia le immagini e ID 
             Random rnd = new Random();
-            var zipped = immaginiDifficile.Zip(idImmaginiDifficile, (img, id) => new { img, id })
-                                          .OrderBy(x => rnd.Next())
-                                          .ToList();
+            int n = immaginiDifficile.Count;
+            for (int i = n - 1; i > 0; i--)
+            {
+                int j = rnd.Next(i + 1);
 
-            immaginiDifficile = zipped.Select(x => x.img).ToList();
-            idImmaginiDifficile = zipped.Select(x => x.id).ToList();
+                // Scambia immagini
+                Image tempImg = immaginiDifficile[i];
+                immaginiDifficile[i] = immaginiDifficile[j];
+                immaginiDifficile[j] = tempImg;
+
+                // Scambia ID
+                int tempId = idImmaginiDifficile[i];
+                idImmaginiDifficile[i] = idImmaginiDifficile[j];
+                idImmaginiDifficile[j] = tempId;
+            }
 
             // Inizializza pannelli
             for (int i = 0; i < caselleDifficile.Count; i++)
@@ -135,7 +124,6 @@ namespace Memory
                 caselleDifficile[i].Visible = true;
             }
 
-            // Configura e avvia il timer
             timerGiocoDifficile.Interval = 1000;
             timerGiocoDifficile.Tick -= TimerGiocoDifficile_Tick;
             timerGiocoDifficile.Tick += TimerGiocoDifficile_Tick;
@@ -166,10 +154,17 @@ namespace Memory
             if (pannello == null || pannello == primoPannello || pannello.Controls.Count > 0)
                 return;
 
-            int indice = caselleDifficile.IndexOf(pannello);
+            int indice = -1;
+            for (int i = 0; i < caselleDifficile.Count; i++)
+            {
+                if (caselleDifficile[i] == pannello)
+                {
+                    indice = i;
+                    break;
+                }
+            }
             if (indice == -1) return;
 
-            // Mostra immagine
             PictureBox pb = new PictureBox
             {
                 Image = immaginiDifficile[indice],
@@ -209,14 +204,23 @@ namespace Memory
                 secondoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
             }
 
-            // Reset
             primoPannello = null;
             secondoPannello = null;
             indicePrimo = -1;
             indiceSecondo = -1;
             blocco = false;
 
-            if (caselleDifficile.All(p => !p.Visible))
+            bool giocoFinito = true;
+            for (int i = 0; i < caselleDifficile.Count; i++)
+            {
+                if (caselleDifficile[i].Visible)
+                {
+                    giocoFinito = false;
+                    break;
+                }
+            }
+
+            if (giocoFinito)
             {
                 timerGiocoDifficile.Stop();
                 int tempoUsato = 120 - tempoRimanenteDifficile;
@@ -227,7 +231,7 @@ namespace Memory
 
         private void DifficoltàDifficile_Load(object sender, EventArgs e)
         {
-
+        
         }
     }
 }

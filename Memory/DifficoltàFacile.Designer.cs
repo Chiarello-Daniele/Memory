@@ -75,11 +75,10 @@
             // 
             // lblTempo
             // 
-            this.lblTempo.AutoSize = true;
             this.lblTempo.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTempo.Location = new System.Drawing.Point(53, 36);
+            this.lblTempo.Location = new System.Drawing.Point(20, 50);
             this.lblTempo.Name = "lblTempo";
-            this.lblTempo.Size = new System.Drawing.Size(79, 31);
+            this.lblTempo.Size = new System.Drawing.Size(123, 62);
             this.lblTempo.TabIndex = 3;
             this.lblTempo.Text = "label1";
             // 
@@ -174,7 +173,6 @@
             this.Text = "DifficoltàFacile";
             this.Load += new System.EventHandler(this.DifficoltàFacile_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

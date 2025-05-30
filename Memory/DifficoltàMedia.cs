@@ -28,7 +28,6 @@ namespace Memory
 
         private void IniziaGiocoMedio()
         {
-            // Pulisci liste e resetta timer
             caselleMedio.Clear();
             immaginiMedio.Clear();
             idImmaginiMedio.Clear();
@@ -71,51 +70,25 @@ namespace Memory
                 idImmaginiMedio.Add(i);
             }
 
-            // Mischia immagini e ID usando un array di indici ordinati casualmente
+            // Mischia immagini e ID usando algoritmo Fisher–Yates
             Random rnd = new Random();
             int n = immaginiMedio.Count;
-
-            int[] indices = new int[n];
-            for (int i = 0; i < n; i++)
-                indices[i] = i;
-
-            int[] randomKeys = new int[n];
-            for (int i = 0; i < n; i++)
-                randomKeys[i] = rnd.Next();
-
-            // Bubble sort semplice per ordinare gli indici secondo randomKeys
-            for (int i = 0; i < n - 1; i++)
+            for (int i = n - 1; i > 0; i--)
             {
-                for (int j = i + 1; j < n; j++)
-                {
-                    if (randomKeys[i] > randomKeys[j])
-                    {
-                        // Scambia chiavi
-                        int tempKey = randomKeys[i];
-                        randomKeys[i] = randomKeys[j];
-                        randomKeys[j] = tempKey;
+                int j = rnd.Next(i + 1);
 
-                        // Scambia indici
-                        int tempIdx = indices[i];
-                        indices[i] = indices[j];
-                        indices[j] = tempIdx;
-                    }
-                }
+                // Scambia immagini
+                Image tempImg = immaginiMedio[i];
+                immaginiMedio[i] = immaginiMedio[j];
+                immaginiMedio[j] = tempImg;
+
+                // Scambia ID
+                int tempId = idImmaginiMedio[i];
+                idImmaginiMedio[i] = idImmaginiMedio[j];
+                idImmaginiMedio[j] = tempId;
             }
 
-            // Ricostruisci le liste mischiate
-            List<Image> immaginiMischiate = new List<Image>();
-            List<int> idMischiati = new List<int>();
-            for (int i = 0; i < n; i++)
-            {
-                immaginiMischiate.Add(immaginiMedio[indices[i]]);
-                idMischiati.Add(idImmaginiMedio[indices[i]]);
-            }
-
-            immaginiMedio = immaginiMischiate;
-            idImmaginiMedio = idMischiati;
-
-            // Imposta pannelli con immagine copertura e abilitali
+            // Imposta pannelli
             for (int i = 0; i < caselleMedio.Count; i++)
             {
                 caselleMedio[i].BackgroundImage = Properties.Resources.carta_removebg_preview1;
@@ -128,12 +101,12 @@ namespace Memory
             }
 
             // Timer setup
-            timerGiocoMedio.Interval = 1000; // 1 secondo
+            timerGiocoMedio.Interval = 1000;
             timerGiocoMedio.Tick -= TimerGioco_Tick;
             timerGiocoMedio.Tick += TimerGioco_Tick;
             timerGiocoMedio.Start();
 
-            // Resetta variabili di gioco
+            // Reset variabili
             primoPannello = null;
             secondoPannello = null;
             indicePrimo = -1;
@@ -201,7 +174,6 @@ namespace Memory
 
             if (idImmaginiMedio[indicePrimo] == idImmaginiMedio[indiceSecondo])
             {
-                // Se corrispondono, nascondi i pannelli
                 primoPannello.Controls.Clear();
                 secondoPannello.Controls.Clear();
                 primoPannello.Enabled = false;
@@ -211,7 +183,6 @@ namespace Memory
             }
             else
             {
-                // Se non corrispondono, copri di nuovo le immagini
                 primoPannello.Controls.Clear();
                 secondoPannello.Controls.Clear();
                 primoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
@@ -224,11 +195,11 @@ namespace Memory
             indiceSecondo = -1;
             blocco = false;
 
-            // Controlla se il gioco è finito (tutti i pannelli nascosti)
+            // Controlla se il gioco è finito
             bool finito = true;
             for (int i = 0; i < caselleMedio.Count; i++)
             {
-                if (caselleMedio[i].Visible == true)
+                if (caselleMedio[i].Visible)
                 {
                     finito = false;
                     break;
@@ -246,7 +217,7 @@ namespace Memory
 
         private void DifficoltàMedia_Load(object sender, EventArgs e)
         {
-            // Puoi mettere codice di inizializzazione qui, se serve
+            // Inizializzazione se necessaria
         }
     }
 }
