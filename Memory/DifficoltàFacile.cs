@@ -64,7 +64,7 @@ namespace Memory
                 idImmaginiFacile.Add(i);
             }
 
-            // Mischia le immagini e i relativi ID con algoritmo Fisher-Yates
+            // Mischia le immagini e i relativi ID 
             Random rnd = new Random();
             for (int i = immaginiFacile.Count - 1; i > 0; i--)
             {

@@ -70,7 +70,7 @@ namespace Memory
                 idImmaginiMedio.Add(i);
             }
 
-            // Mischia immagini e ID usando algoritmo Fisher–Yates
+            // Mischia immagini e ID 
             Random rnd = new Random();
             int n = immaginiMedio.Count;
             for (int i = n - 1; i > 0; i--)
