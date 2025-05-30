@@ -124,9 +124,10 @@
             // 
             this.lblTimerDifficile.AutoSize = true;
             this.lblTimerDifficile.BackColor = System.Drawing.Color.Transparent;
+            this.lblTimerDifficile.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimerDifficile.Location = new System.Drawing.Point(108, 81);
             this.lblTimerDifficile.Name = "lblTimerDifficile";
-            this.lblTimerDifficile.Size = new System.Drawing.Size(66, 16);
+            this.lblTimerDifficile.Size = new System.Drawing.Size(122, 31);
             this.lblTimerDifficile.TabIndex = 30;
             this.lblTimerDifficile.Text = "lbl_tempo";
             // 
@@ -405,7 +406,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DifficoltàDifficile";
             this.Text = "DifficoltàDifficile";
-            
             this.pnl_LayoutDifficile.ResumeLayout(false);
             this.pnl_LayoutDifficile.PerformLayout();
             this.ResumeLayout(false);

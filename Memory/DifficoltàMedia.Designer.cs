@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_TitoloFacile = new System.Windows.Forms.Label();
             this.lblTimer = new System.Windows.Forms.Label();
             this.pnl_13Medio = new System.Windows.Forms.Panel();
             this.pnl_14Medio = new System.Windows.Forms.Panel();
@@ -36,6 +37,7 @@
             this.pnl_16Medio = new System.Windows.Forms.Panel();
             this.pnl_6Medio = new System.Windows.Forms.Panel();
             this.pnl_8Medio = new System.Windows.Forms.Panel();
+            this.pnl_5Medio = new System.Windows.Forms.Panel();
             this.pnl_11Medio = new System.Windows.Forms.Panel();
             this.pnl_7Medio = new System.Windows.Forms.Panel();
             this.pnl_9Medio = new System.Windows.Forms.Panel();
@@ -45,8 +47,6 @@
             this.pnl_3Medio = new System.Windows.Forms.Panel();
             this.pnl_2Medio = new System.Windows.Forms.Panel();
             this.pnl_1Medio = new System.Windows.Forms.Panel();
-            this.pnl_5Medio = new System.Windows.Forms.Panel();
-            this.lbl_TitoloFacile = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,13 +78,24 @@
             this.panel1.Size = new System.Drawing.Size(1427, 783);
             this.panel1.TabIndex = 0;
             // 
+            // lbl_TitoloFacile
+            // 
+            this.lbl_TitoloFacile.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TitoloFacile.Font = new System.Drawing.Font("Reem Kufi", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TitoloFacile.Location = new System.Drawing.Point(389, 37);
+            this.lbl_TitoloFacile.Name = "lbl_TitoloFacile";
+            this.lbl_TitoloFacile.Size = new System.Drawing.Size(648, 74);
+            this.lbl_TitoloFacile.TabIndex = 32;
+            this.lbl_TitoloFacile.Text = "DIFFICOLTA\' MEDIA";
+            // 
             // lblTimer
             // 
             this.lblTimer.AutoSize = true;
             this.lblTimer.BackColor = System.Drawing.Color.Transparent;
-            this.lblTimer.Location = new System.Drawing.Point(166, 74);
+            this.lblTimer.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.Location = new System.Drawing.Point(68, 67);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(66, 16);
+            this.lblTimer.Size = new System.Drawing.Size(122, 31);
             this.lblTimer.TabIndex = 14;
             this.lblTimer.Text = "lbl_tempo";
             // 
@@ -142,6 +153,16 @@
             this.pnl_8Medio.Size = new System.Drawing.Size(120, 150);
             this.pnl_8Medio.TabIndex = 8;
             this.pnl_8Medio.Click += new System.EventHandler(this.Pannello_Click);
+            // 
+            // pnl_5Medio
+            // 
+            this.pnl_5Medio.BackgroundImage = global::Memory.Properties.Resources.carta_removebg_preview;
+            this.pnl_5Medio.Location = new System.Drawing.Point(648, 156);
+            this.pnl_5Medio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_5Medio.Name = "pnl_5Medio";
+            this.pnl_5Medio.Size = new System.Drawing.Size(120, 150);
+            this.pnl_5Medio.TabIndex = 9;
+            this.pnl_5Medio.Click += new System.EventHandler(this.Pannello_Click);
             // 
             // pnl_11Medio
             // 
@@ -226,26 +247,6 @@
             this.pnl_1Medio.Size = new System.Drawing.Size(120, 150);
             this.pnl_1Medio.TabIndex = 0;
             this.pnl_1Medio.Click += new System.EventHandler(this.Pannello_Click);
-            // 
-            // pnl_5Medio
-            // 
-            this.pnl_5Medio.BackgroundImage = global::Memory.Properties.Resources.carta_removebg_preview;
-            this.pnl_5Medio.Location = new System.Drawing.Point(648, 156);
-            this.pnl_5Medio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_5Medio.Name = "pnl_5Medio";
-            this.pnl_5Medio.Size = new System.Drawing.Size(120, 150);
-            this.pnl_5Medio.TabIndex = 9;
-            this.pnl_5Medio.Click += new System.EventHandler(this.Pannello_Click);
-            // 
-            // lbl_TitoloFacile
-            // 
-            this.lbl_TitoloFacile.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_TitoloFacile.Font = new System.Drawing.Font("Reem Kufi", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TitoloFacile.Location = new System.Drawing.Point(389, 37);
-            this.lbl_TitoloFacile.Name = "lbl_TitoloFacile";
-            this.lbl_TitoloFacile.Size = new System.Drawing.Size(648, 74);
-            this.lbl_TitoloFacile.TabIndex = 32;
-            this.lbl_TitoloFacile.Text = "DIFFICOLTA\' MEDIA";
             // 
             // DifficoltàMedia
             // 

@@ -76,9 +76,10 @@
             // lblTempo
             // 
             this.lblTempo.AutoSize = true;
+            this.lblTempo.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTempo.Location = new System.Drawing.Point(53, 36);
             this.lblTempo.Name = "lblTempo";
-            this.lblTempo.Size = new System.Drawing.Size(44, 16);
+            this.lblTempo.Size = new System.Drawing.Size(79, 31);
             this.lblTempo.TabIndex = 3;
             this.lblTempo.Text = "label1";
             // 
