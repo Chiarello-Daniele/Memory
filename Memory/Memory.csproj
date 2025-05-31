@@ -218,5 +218,8 @@
   <ItemGroup>
     <None Include="Resources\sfondo-facile.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\goodresult-82807.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

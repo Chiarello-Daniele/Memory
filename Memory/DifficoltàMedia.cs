@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 
 namespace Memory
@@ -10,6 +11,7 @@ namespace Memory
         List<Panel> caselleMedio = new List<Panel>();
         List<Image> immaginiMedio = new List<Image>();
         List<int> idImmaginiMedio = new List<int>();
+        SoundPlayer Suono = new SoundPlayer();
 
         Panel primoPannello = null;
         Panel secondoPannello = null;
@@ -125,6 +127,8 @@ namespace Memory
             if (tempoRimanenteMedio <= 0)
             {
                 timerGiocoMedio.Stop();
+                Suono.SoundLocation = "fiasco-154915.wav";
+                Suono.Play();
                 MessageBox.Show("Tempo scaduto! Hai perso!", "Sconfitta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 IniziaGiocoMedio();
             }
@@ -180,6 +184,8 @@ namespace Memory
                 secondoPannello.Enabled = false;
                 primoPannello.Visible = false;
                 secondoPannello.Visible = false;
+                Suono.SoundLocation = "sonido-correcto-331225.wav";
+                Suono.Play();
             }
             else
             {
@@ -187,6 +193,8 @@ namespace Memory
                 secondoPannello.Controls.Clear();
                 primoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
                 secondoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
+                Suono.SoundLocation = "windows-error-sound-effect-35894.wav";
+                Suono.Play();
             }
 
             primoPannello = null;
@@ -210,6 +218,8 @@ namespace Memory
             {
                 timerGiocoMedio.Stop();
                 int tempoUsato = 90 - tempoRimanenteMedio;
+                Suono.SoundLocation = "goodresult-82807.wav";
+                Suono.Play();
                 MessageBox.Show("Hai vinto in " + tempoUsato + " secondi! Complimenti!", "Vittoria");
                 IniziaGiocoMedio();
             }

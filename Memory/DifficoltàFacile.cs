@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using System.Media;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Memory
 {
@@ -13,7 +13,7 @@ namespace Memory
         List<Panel> caselleFacile = new List<Panel>();
         List<Image> immaginiFacile = new List<Image>();
         List<int> idImmaginiFacile = new List<int>();
-        //SoundPlayer CoppiaTrovata = new SoundPlayer(Properties.)
+        SoundPlayer Suono = new SoundPlayer();
 
         Panel primoPannello = null;
         Panel secondoPannello = null;
@@ -111,8 +111,11 @@ namespace Memory
             if (tempoRimanenteFacile <= 0)
             {
                 timerGiocoFacile.Stop();
+                Suono.SoundLocation = "fiasco-154915.wav";
+                Suono.Play();
                 MessageBox.Show("Tempo scaduto! Hai perso!", "Sconfitta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 IniziaGiocoFacile();
+               
             }
         }
 
@@ -157,6 +160,8 @@ namespace Memory
                 secondoPannello.Enabled = false;
                 primoPannello.Visible = false;
                 secondoPannello.Visible = false;
+                Suono.SoundLocation = "sonido-correcto-331225.wav";
+                Suono.Play();
             }
             else
             {
@@ -164,6 +169,8 @@ namespace Memory
                 secondoPannello.Controls.Clear();
                 primoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
                 secondoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
+                Suono.SoundLocation = "windows-error-sound-effect-35894.wav";
+                Suono.Play();
             }
 
             primoPannello = null;
@@ -186,10 +193,13 @@ namespace Memory
             if (vittoria)
             {
                 timerGiocoFacile.Stop();
-                int tempoUsato = tempoTotale - tempoRimanenteFacile;
+                int tempoUsato = tempoTotale - tempoRimanenteFacile;             
+                Suono.SoundLocation = "goodresult-82807.wav";
+                Suono.Play();            
                 MessageBox.Show($"Hai vinto in {tempoUsato} secondi! Complimenti!", "Vittoria");
                 IniziaGiocoFacile();
             }
+
         }
 
         private void pnl_8Facile_Click(object sender, EventArgs e) { }

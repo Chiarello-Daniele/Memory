@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Media;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -11,6 +12,7 @@ namespace Memory
         List<Panel> caselleDifficile = new List<Panel>();
         List<Image> immaginiDifficile = new List<Image>();
         List<int> idImmaginiDifficile = new List<int>();
+        SoundPlayer Suono = new SoundPlayer();
 
         Panel primoPannello = null;
         Panel secondoPannello = null;
@@ -141,6 +143,8 @@ namespace Memory
             if (tempoRimanenteDifficile <= 0)
             {
                 timerGiocoDifficile.Stop();
+                Suono.SoundLocation = "fiasco-154915.wav";
+                Suono.Play();
                 MessageBox.Show("Tempo scaduto! Hai perso!", "Sconfitta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 IniziaGiocoDifficile();
             }
@@ -195,6 +199,8 @@ namespace Memory
                 secondoPannello.Enabled = false;
                 primoPannello.Visible = false;
                 secondoPannello.Visible = false;
+                Suono.SoundLocation = "sonido-correcto-331225.wav";
+                Suono.Play();
             }
             else
             {
@@ -202,6 +208,8 @@ namespace Memory
                 secondoPannello.Controls.Clear();
                 primoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
                 secondoPannello.BackgroundImage = Properties.Resources.carta_removebg_preview1;
+                Suono.SoundLocation = "windows-error-sound-effect-35894.wav";
+                Suono.Play();
             }
 
             primoPannello = null;
@@ -224,6 +232,8 @@ namespace Memory
             {
                 timerGiocoDifficile.Stop();
                 int tempoUsato = 120 - tempoRimanenteDifficile;
+                Suono.SoundLocation = "goodresult-82807.wav";
+                Suono.Play();
                 MessageBox.Show($"Hai vinto in {tempoUsato} secondi! Complimenti!", "Vittoria");
                 IniziaGiocoDifficile();
             }
