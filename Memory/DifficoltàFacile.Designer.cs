@@ -46,9 +46,10 @@
             // lbl_TitoloFacile
             // 
             this.lbl_TitoloFacile.Font = new System.Drawing.Font("Reem Kufi", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TitoloFacile.Location = new System.Drawing.Point(149, 0);
+            this.lbl_TitoloFacile.Location = new System.Drawing.Point(112, 0);
+            this.lbl_TitoloFacile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_TitoloFacile.Name = "lbl_TitoloFacile";
-            this.lbl_TitoloFacile.Size = new System.Drawing.Size(535, 74);
+            this.lbl_TitoloFacile.Size = new System.Drawing.Size(401, 60);
             this.lbl_TitoloFacile.TabIndex = 0;
             this.lbl_TitoloFacile.Text = "DIFFICOLTA\' FACILE";
             // 
@@ -66,109 +67,110 @@
             this.panel1.Controls.Add(this.pnl_2Facile);
             this.panel1.Controls.Add(this.pnl_1Facile);
             this.panel1.Controls.Add(this.lbl_TitoloFacile);
-            this.panel1.Location = new System.Drawing.Point(-12, -6);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(-9, -5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(833, 458);
+            this.panel1.Size = new System.Drawing.Size(625, 387);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblTempo
             // 
             this.lblTempo.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTempo.Location = new System.Drawing.Point(20, 50);
+            this.lblTempo.Location = new System.Drawing.Point(15, 41);
+            this.lblTempo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTempo.Name = "lblTempo";
-            this.lblTempo.Size = new System.Drawing.Size(123, 62);
+            this.lblTempo.Size = new System.Drawing.Size(92, 50);
             this.lblTempo.TabIndex = 3;
             this.lblTempo.Text = "label1";
             // 
             // pnl_8Facile
             // 
             this.pnl_8Facile.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_8Facile.Location = new System.Drawing.Point(549, 258);
-            this.pnl_8Facile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_8Facile.Location = new System.Drawing.Point(412, 210);
+            this.pnl_8Facile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_8Facile.Name = "pnl_8Facile";
-            this.pnl_8Facile.Size = new System.Drawing.Size(80, 74);
+            this.pnl_8Facile.Size = new System.Drawing.Size(60, 60);
             this.pnl_8Facile.TabIndex = 2;
             this.pnl_8Facile.Click += new System.EventHandler(this.pnl_8Facile_Click);
             // 
             // pnl_7Facile
             // 
             this.pnl_7Facile.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_7Facile.Location = new System.Drawing.Point(408, 258);
-            this.pnl_7Facile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_7Facile.Location = new System.Drawing.Point(306, 210);
+            this.pnl_7Facile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_7Facile.Name = "pnl_7Facile";
-            this.pnl_7Facile.Size = new System.Drawing.Size(80, 74);
+            this.pnl_7Facile.Size = new System.Drawing.Size(60, 60);
             this.pnl_7Facile.TabIndex = 2;
             this.pnl_7Facile.Click += new System.EventHandler(this.pnl_8Facile_Click);
             // 
             // pnl_6Facile
             // 
             this.pnl_6Facile.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_6Facile.Location = new System.Drawing.Point(267, 258);
-            this.pnl_6Facile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_6Facile.Location = new System.Drawing.Point(200, 210);
+            this.pnl_6Facile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_6Facile.Name = "pnl_6Facile";
-            this.pnl_6Facile.Size = new System.Drawing.Size(80, 74);
+            this.pnl_6Facile.Size = new System.Drawing.Size(60, 60);
             this.pnl_6Facile.TabIndex = 2;
             this.pnl_6Facile.Click += new System.EventHandler(this.pnl_8Facile_Click);
             // 
             // pnl_5Facile
             // 
             this.pnl_5Facile.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_5Facile.Location = new System.Drawing.Point(124, 258);
-            this.pnl_5Facile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_5Facile.Location = new System.Drawing.Point(93, 210);
+            this.pnl_5Facile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_5Facile.Name = "pnl_5Facile";
-            this.pnl_5Facile.Size = new System.Drawing.Size(80, 74);
+            this.pnl_5Facile.Size = new System.Drawing.Size(60, 60);
             this.pnl_5Facile.TabIndex = 2;
             this.pnl_5Facile.Click += new System.EventHandler(this.pnl_8Facile_Click);
             // 
             // pnl_4Facile
             // 
             this.pnl_4Facile.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_4Facile.Location = new System.Drawing.Point(549, 124);
-            this.pnl_4Facile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_4Facile.Location = new System.Drawing.Point(412, 101);
+            this.pnl_4Facile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_4Facile.Name = "pnl_4Facile";
-            this.pnl_4Facile.Size = new System.Drawing.Size(80, 74);
+            this.pnl_4Facile.Size = new System.Drawing.Size(60, 60);
             this.pnl_4Facile.TabIndex = 2;
             this.pnl_4Facile.Click += new System.EventHandler(this.pnl_8Facile_Click);
             // 
             // pnl_3Facile
             // 
             this.pnl_3Facile.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_3Facile.Location = new System.Drawing.Point(408, 124);
-            this.pnl_3Facile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_3Facile.Location = new System.Drawing.Point(306, 101);
+            this.pnl_3Facile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_3Facile.Name = "pnl_3Facile";
-            this.pnl_3Facile.Size = new System.Drawing.Size(80, 74);
+            this.pnl_3Facile.Size = new System.Drawing.Size(60, 60);
             this.pnl_3Facile.TabIndex = 2;
             this.pnl_3Facile.Click += new System.EventHandler(this.pnl_8Facile_Click);
             // 
             // pnl_2Facile
             // 
             this.pnl_2Facile.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_2Facile.Location = new System.Drawing.Point(267, 124);
-            this.pnl_2Facile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_2Facile.Location = new System.Drawing.Point(200, 101);
+            this.pnl_2Facile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_2Facile.Name = "pnl_2Facile";
-            this.pnl_2Facile.Size = new System.Drawing.Size(80, 74);
+            this.pnl_2Facile.Size = new System.Drawing.Size(60, 60);
             this.pnl_2Facile.TabIndex = 1;
             this.pnl_2Facile.Click += new System.EventHandler(this.pnl_8Facile_Click);
             // 
             // pnl_1Facile
             // 
             this.pnl_1Facile.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_1Facile.Location = new System.Drawing.Point(124, 124);
-            this.pnl_1Facile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_1Facile.Location = new System.Drawing.Point(93, 101);
+            this.pnl_1Facile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_1Facile.Name = "pnl_1Facile";
-            this.pnl_1Facile.Size = new System.Drawing.Size(80, 74);
+            this.pnl_1Facile.Size = new System.Drawing.Size(60, 60);
             this.pnl_1Facile.TabIndex = 0;
             this.pnl_1Facile.Click += new System.EventHandler(this.pnl_8Facile_Click);
             // 
             // DifficoltàFacile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 455);
+            this.ClientSize = new System.Drawing.Size(563, 370);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DifficoltàFacile";
             this.Text = "DifficoltàFacile";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DifficoltàFacile_FormClosed);

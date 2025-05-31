@@ -45,18 +45,19 @@
             this.pnl_layoutHome.Controls.Add(this.btn_Difficoltà);
             this.pnl_layoutHome.Controls.Add(this.lbl_difficoltà);
             this.pnl_layoutHome.Controls.Add(this.lbl_Titolo);
-            this.pnl_layoutHome.Location = new System.Drawing.Point(3, -11);
-            this.pnl_layoutHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_layoutHome.Location = new System.Drawing.Point(-2, -9);
+            this.pnl_layoutHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_layoutHome.Name = "pnl_layoutHome";
-            this.pnl_layoutHome.Size = new System.Drawing.Size(874, 516);
+            this.pnl_layoutHome.Size = new System.Drawing.Size(660, 419);
             this.pnl_layoutHome.TabIndex = 0;
             // 
             // btn_Regole
             // 
             this.btn_Regole.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Regole.Location = new System.Drawing.Point(453, 229);
+            this.btn_Regole.Location = new System.Drawing.Point(340, 186);
+            this.btn_Regole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Regole.Name = "btn_Regole";
-            this.btn_Regole.Size = new System.Drawing.Size(199, 57);
+            this.btn_Regole.Size = new System.Drawing.Size(149, 46);
             this.btn_Regole.TabIndex = 6;
             this.btn_Regole.Text = "Regole";
             this.btn_Regole.UseVisualStyleBackColor = true;
@@ -65,9 +66,10 @@
             // btn_Difficoltà
             // 
             this.btn_Difficoltà.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Difficoltà.Location = new System.Drawing.Point(191, 229);
+            this.btn_Difficoltà.Location = new System.Drawing.Point(143, 186);
+            this.btn_Difficoltà.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Difficoltà.Name = "btn_Difficoltà";
-            this.btn_Difficoltà.Size = new System.Drawing.Size(191, 57);
+            this.btn_Difficoltà.Size = new System.Drawing.Size(143, 46);
             this.btn_Difficoltà.TabIndex = 5;
             this.btn_Difficoltà.Text = "Difficoltà";
             this.btn_Difficoltà.UseVisualStyleBackColor = true;
@@ -78,9 +80,10 @@
             this.lbl_difficoltà.BackColor = System.Drawing.Color.Transparent;
             this.lbl_difficoltà.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_difficoltà.ForeColor = System.Drawing.Color.White;
-            this.lbl_difficoltà.Location = new System.Drawing.Point(186, 117);
+            this.lbl_difficoltà.Location = new System.Drawing.Point(140, 95);
+            this.lbl_difficoltà.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_difficoltà.Name = "lbl_difficoltà";
-            this.lbl_difficoltà.Size = new System.Drawing.Size(437, 66);
+            this.lbl_difficoltà.Size = new System.Drawing.Size(328, 54);
             this.lbl_difficoltà.TabIndex = 4;
             this.lbl_difficoltà.Text = "Benvenuto! Scegli una difficoltà per giocare oppure guarda le regole";
             // 
@@ -89,20 +92,21 @@
             this.lbl_Titolo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Titolo.Font = new System.Drawing.Font("Reem Kufi", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titolo.ForeColor = System.Drawing.Color.White;
-            this.lbl_Titolo.Location = new System.Drawing.Point(290, 0);
+            this.lbl_Titolo.Location = new System.Drawing.Point(218, 0);
+            this.lbl_Titolo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Titolo.Name = "lbl_Titolo";
-            this.lbl_Titolo.Size = new System.Drawing.Size(333, 97);
+            this.lbl_Titolo.Size = new System.Drawing.Size(250, 79);
             this.lbl_Titolo.TabIndex = 0;
             this.lbl_Titolo.Text = "Memory";
             this.lbl_Titolo.Click += new System.EventHandler(this.lbl_Titolo_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 504);
+            this.ClientSize = new System.Drawing.Size(658, 410);
             this.Controls.Add(this.pnl_layoutHome);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
