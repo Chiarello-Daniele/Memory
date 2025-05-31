@@ -65,7 +65,7 @@ namespace Memory
             for (int i = 0; i < 2; i++) immaginiMedio.Add(Properties.Resources.DonkeyKong);
             for (int i = 0; i < 2; i++) immaginiMedio.Add(Properties.Resources.bowser);
 
-            // Crea gli ID (due uguali per coppia)
+            // Crea gli ID 
             for (int i = 0; i < 8; i++)
             {
                 idImmaginiMedio.Add(i);

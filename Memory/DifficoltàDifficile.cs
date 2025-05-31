@@ -37,7 +37,7 @@ namespace Memory
             tempoRimanenteDifficile = 120;
             lblTimerDifficile.Text = "Tempo: 2:00";
 
-            // Aggiungi i 32 pannelli
+            // Aggiungi i  pannelli
             caselleDifficile.Add(pnl_1Difficile);
             caselleDifficile.Add(pnl_2Difficile);
             caselleDifficile.Add(pnl_3Difficile);
@@ -71,7 +71,7 @@ namespace Memory
             caselleDifficile.Add(pnl_31Difficile);
             caselleDifficile.Add(pnl_32Difficile);
 
-            // Aggiungi immagini 2 copie per tipo
+            // Aggiungi immagini 
             for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.cicciogamer);
             for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.marza);
             for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.blur);
@@ -89,7 +89,7 @@ namespace Memory
             for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.dipre);
             for (int i = 0; i < 2; i++) immaginiDifficile.Add(Properties.Resources.allegi);
 
-            // Crea ID immagini (due per ciascuna immagine)
+            // Crea ID immagini 
             for (int i = 0; i < 16; i++)
             {
                 idImmaginiDifficile.Add(i);
