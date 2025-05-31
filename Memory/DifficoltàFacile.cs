@@ -171,7 +171,17 @@ namespace Memory
             blocco = false;
 
             // Controllo vittoria
-            if (caselleFacile.All(p => !p.Visible))
+            bool vittoria = true;
+            foreach (var pannell in caselleFacile)
+            {
+                if (pannell.Visible)
+                {
+                    vittoria = false;
+                    break;
+                }
+            }
+
+            if (vittoria)
             {
                 timerGiocoFacile.Stop();
                 int tempoUsato = tempoTotale - tempoRimanenteFacile;

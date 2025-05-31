@@ -18,7 +18,7 @@ namespace Memory
         bool blocco = false;
 
         Timer timerGiocoMedio = new Timer();
-        int tempoRimanenteMedio = 60;
+        int tempoRimanenteMedio = 90;
 
         public DifficoltàMedia()
         {
@@ -217,7 +217,7 @@ namespace Memory
 
         private void DifficoltàMedia_Load(object sender, EventArgs e)
         {
-            // Inizializzazione se necessaria
+            
         }
     }
 }
