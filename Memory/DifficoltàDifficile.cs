@@ -233,5 +233,10 @@ namespace Memory
         {
         
         }
+
+        private void DifficoltàDifficile_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timerGiocoDifficile.Stop();
+        }
     }
 }

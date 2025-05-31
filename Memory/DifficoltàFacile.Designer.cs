@@ -171,6 +171,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DifficoltàFacile";
             this.Text = "DifficoltàFacile";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DifficoltàFacile_FormClosed);
             this.Load += new System.EventHandler(this.DifficoltàFacile_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -406,6 +406,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DifficoltàDifficile";
             this.Text = "DifficoltàDifficile";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DifficoltàDifficile_FormClosed);
             this.pnl_LayoutDifficile.ResumeLayout(false);
             this.pnl_LayoutDifficile.PerformLayout();
             this.ResumeLayout(false);

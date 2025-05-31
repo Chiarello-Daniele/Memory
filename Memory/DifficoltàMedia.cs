@@ -219,5 +219,10 @@ namespace Memory
         {
             
         }
+
+        private void DifficoltàMedia_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timerGiocoMedio.Stop();
+        }
     }
 }

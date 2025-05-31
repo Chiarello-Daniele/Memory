@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,6 +13,7 @@ namespace Memory
         List<Panel> caselleFacile = new List<Panel>();
         List<Image> immaginiFacile = new List<Image>();
         List<int> idImmaginiFacile = new List<int>();
+        //SoundPlayer CoppiaTrovata = new SoundPlayer(Properties.)
 
         Panel primoPannello = null;
         Panel secondoPannello = null;
@@ -195,5 +197,10 @@ namespace Memory
         private void panel1_Paint(object sender, PaintEventArgs e) { }
 
         private void DifficoltàFacile_Load(object sender, EventArgs e) { }
+
+        private void DifficoltàFacile_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timerGiocoFacile.Stop();
+        }
     }
 }

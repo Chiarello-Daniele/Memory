@@ -257,6 +257,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DifficoltàMedia";
             this.Text = "DifficoltàMedia";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DifficoltàMedia_FormClosed);
             this.Load += new System.EventHandler(this.DifficoltàMedia_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
